@@ -1,0 +1,24 @@
+Package: RcppDend
+Type: Package
+Title: Faster dendrogram manipulation using Rcpp
+Version: 0.1.0
+Date: 2013-08-16
+Author: Romain Francois, Dirk Eddelbuettel, Tal Galili
+Maintainer: Tal Galili <tal.galili@math.tau.ac.il>
+Description: This package offers faster manipulation of dendrogram objects in
+    R. A dendrogram object in R are is a list structure with attributes in its
+    nodes and leaves. Working with dendrogram objects often require a function
+    to recursively go through all (or most) element in the list object.
+    Naturally, such function are rather slow in R, but can become much faster
+    thank to Rcpp.
+License: GPL-2 | GPL-3
+URL: https://github.com/talgalili/RcppDend/
+Depends:
+    Rcpp (>= 0.10.3)
+Suggests:
+    testthat,
+    microbenchmark
+Collate:
+    'RcppExports.R'
+    'RcppDend.r'
+LinkingTo: Rcpp

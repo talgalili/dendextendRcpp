@@ -1,0 +1,21 @@
+RcppDend 0.1.0 (2013-08-16)
+----------------------------
+
+NEW R FUNCTIONS ADDED: 
+   * labels.dendrogram - overrides R's default stats:::labels.dendrogram function.
+
+NEW RCPP FUNCTIONS ADDED: 
+   * is_list
+   * is_string
+   * is_logical
+   * is_leaf
+   * get_label
+   * push_back_labels
+   * Rcpp_labels_dendrogram
+   * Rcpp_count_leaves
+
+OTHER NOTES:
+   * First commit. Includes DESCRIPTION, a template for a basic test, a labels function, and this NEWS.
+
+
+
