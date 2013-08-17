@@ -1,2 +1,4 @@
+useDynLib(RcppDend)
+exportPattern("^[[:alpha:]]+")
 export(labels.dendrogram)
 S3method(labels,dendrogram)

@@ -9,19 +9,29 @@ using namespace Rcpp;
 std::vector<std::string> Rcpp_labels_dendrogram(List x);
 RcppExport SEXP RcppDend_Rcpp_labels_dendrogram(SEXP xSEXP) {
 BEGIN_RCPP
-    Rcpp::RNGScope __rngScope;
-    List x = Rcpp::as<List >(xSEXP);
-    std::vector<std::string> __result = Rcpp_labels_dendrogram(x);
-    return Rcpp::wrap(__result);
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        List x = Rcpp::as<List >(xSEXP);
+        std::vector<std::string> __result = Rcpp_labels_dendrogram(x);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
 END_RCPP
 }
 // Rcpp_count_leaves
 int Rcpp_count_leaves(List data);
 RcppExport SEXP RcppDend_Rcpp_count_leaves(SEXP dataSEXP) {
 BEGIN_RCPP
-    Rcpp::RNGScope __rngScope;
-    List data = Rcpp::as<List >(dataSEXP);
-    int __result = Rcpp_count_leaves(data);
-    return Rcpp::wrap(__result);
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        List data = Rcpp::as<List >(dataSEXP);
+        int __result = Rcpp_count_leaves(data);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
 END_RCPP
 }

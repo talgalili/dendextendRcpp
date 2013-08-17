@@ -1,3 +1,16 @@
+RcppDend 0.1.1 (2013-08-17)
+----------------------------
+
+BUG FIXES
+   * Added missing rows from NAMESPACE (They were removed automatically due to a bug in roxygen2+Rstudio)
+
+OTHER NOTES:
+   * Added tests
+
+
+
+
+
 RcppDend 0.1.0 (2013-08-16)
 ----------------------------
 
