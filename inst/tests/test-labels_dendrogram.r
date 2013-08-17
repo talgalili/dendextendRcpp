@@ -11,14 +11,31 @@ test_that("Rcpp_labels_dendrogram works",{
 #    # with integer labels
 #    expect_warning(RcppDend:::labels.dendrogram(dend0))
    
-   hc <- hclust(dist(USArrests))
-   dend <- as.dendrogram(hc)
+   dend <- as.dendrogram(hclust(dist(USArrests)))
    
-#    Rcpp_labels_dendrogram(dend)
-
-#    expect_identical(stats:::labels.dendrogram(dend),
-#                     RcppDend:::labels.dendrogram(dend)
-#    )   
+   expect_identical(length(Rcpp_labels_dendrogram(dend)), 50L)
+   
+   expect_identical(stats:::labels.dendrogram(dend),
+                    RcppDend:::labels.dendrogram(dend) )   
+   
+   # doesn't work for labels which are integers, here is an example:
+   no_rownames_USArrests <- USArrests
+   rownames(no_rownames_USArrests) <- NULL
+   no_rownames_dend <- as.dendrogram(hclust(dist(no_rownames_USArrests)))   
+   expect_warning(RcppDend:::labels.dendrogram(no_rownames_dend)) # we reverted to  stats:::labels.dendrogram(dend)
+   
    
 })
 
+
+
+
+test_that("Rcpp_count_leaves works",{
+   dend <- as.dendrogram(hclust(dist(USArrests)))
+   
+   
+   expect_identical(Rcpp_count_leaves(dend),
+                    50L
+   )   
+   
+})

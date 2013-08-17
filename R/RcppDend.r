@@ -52,3 +52,9 @@ labels.dendrogram <- function(object,...) {
    stats:::labels.dendrogram(object)   
 }
 
+
+
+
+# detach( 'package:RcppDend', unload=TRUE )
+# require( 'RcppDend' )
+# labels(dend)
