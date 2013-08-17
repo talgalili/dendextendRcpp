@@ -21,8 +21,7 @@
   Extract the leaves labels from a dendrogram object.
 }
 \examples{
-hc <- hclust(dist(USArrests))
-dend <- as.dendrogram(hc)
+dend <- as.dendrogram(hclust(dist(USArrests)))
 
 labels(dend)
 

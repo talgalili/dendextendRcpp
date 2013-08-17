@@ -34,8 +34,7 @@
 #' R-devel-mailing list.
 #' @seealso \code{\link{labels}}, \code{\link{dendrogram}}
 #' @examples
-#' hc <- hclust(dist(USArrests))
-#' dend <- as.dendrogram(hc)
+#' dend <- as.dendrogram(hclust(dist(USArrests)))
 #' 
 #' labels(dend)
 #' 
