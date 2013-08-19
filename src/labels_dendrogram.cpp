@@ -62,10 +62,21 @@ void push_back_labels( List data, std::vector<std::string>& the_labels){
 
 
 // [[Rcpp::export]]
-std::vector<std::string> Rcpp_labels_dendrogram(List x){
-    std::vector<std::string> the_labels ;
-    push_back_labels(x, the_labels) ;
-    return(the_labels) ;
+std::vector<std::string> Rcpp_labels_dendrogram(List x){   
+   std::vector<std::string> the_labels;   
+   
+//   // For some reason - this doesn't work - so I fixed it in the R code...
+//   // if the tree is a leaf - return its label:
+//   if( is_leaf(x) ){      
+//      std::string x_label = get_label(x);
+//      the_labels.push_back(x_label);
+//   } else {
+//      // else: run through all of it:
+//      push_back_labels(x, the_labels) ;      
+//   }
+   
+   push_back_labels(x, the_labels) ;      
+   return(the_labels) ;
 }
 
 
