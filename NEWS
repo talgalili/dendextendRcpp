@@ -16,9 +16,11 @@ NEW RCPP FUNCTIONS ADDED:
 OTHER NOTES:
    * Moved "is" function to a new file called "is_functions.cpp".
 Created a "is_functions.hpp" file for it, and made sure to call it from "labels_dendrogram.cpp"
+   * moved labels.dendrogram to a new file labels_dendrogram.r
     
 BUG FIXES
    * labels.dendrogram - now returns a label also if the tree is just a leaf.
+
 
 
 RcppDend 0.1.1 (2013-08-17)

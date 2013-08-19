@@ -20,7 +20,8 @@ Suggests:
     microbenchmark
 Collate:
     'RcppExports.R'
-    'RcppDend.r'
     'get_dend_heights.r'
     'heights_per_k.r'
+    'labels_dendrogram.r'
+    'RcppDend.r'
 LinkingTo: Rcpp
