@@ -20,6 +20,8 @@ GNU General Public License for more details.
 */
 
 
+// thanks to: http://stackoverflow.com/questions/15891781/how-to-call-on-a-function-found-on-another-file
+
 //#ifndef PLAYER_H    // To make sure you don't declare the function more than once by including the header multiple times.
 //#define PLAYER_H
 

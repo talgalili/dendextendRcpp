@@ -1,8 +1,8 @@
 Package: RcppDend
 Type: Package
 Title: Faster dendrogram manipulation using Rcpp
-Version: 0.1.1
-Date: 2013-08-16
+Version: 0.2.0
+Date: 2013-08-19
 Author: Romain Francois, Dirk Eddelbuettel, Tal Galili
 Maintainer: Tal Galili <tal.galili@math.tau.ac.il>
 Description: This package offers faster manipulation of dendrogram objects in
@@ -21,4 +21,6 @@ Suggests:
 Collate:
     'RcppExports.R'
     'RcppDend.r'
+    'get_dend_heights.r'
+    'heights_per_k.r'
 LinkingTo: Rcpp
