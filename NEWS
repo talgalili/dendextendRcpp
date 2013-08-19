@@ -24,6 +24,9 @@ BUG FIXES
 THE PACKAGE IS NOW RENAMED:
    * from RcppDend to dendextendRcpp - in order to have it easier to remember (at least for me).
 
+UPDATED FUNCTIONS:
+   * labels.dendrogram - added warn=FALSE
+
 dendextendRcpp 0.1.1 (2013-08-17)
 ----------------------------
 

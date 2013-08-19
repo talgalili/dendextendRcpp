@@ -10,6 +10,10 @@
 \arguments{
   \item{object}{a dendrogram object.}
 
+  \item{warn}{logical (FALSE) - should the user be warned
+  if reverting to default? (I set it to FALSE since it can
+  be very noisy sometimes...)}
+
   \item{...}{not used.}
 }
 \value{
