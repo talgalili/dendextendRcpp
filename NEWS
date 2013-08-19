@@ -15,7 +15,7 @@ NEW RCPP FUNCTIONS ADDED:
 
 OTHER NOTES:
    * Moved "is" function to a new file called "is_functions.cpp".
-Created a "is_functions.h" file for it, and made sure to call it from "labels_dendrogram.cpp"
+Created a "is_functions.hpp" file for it, and made sure to call it from "labels_dendrogram.cpp"
    * 
 
 
