@@ -1,10 +1,19 @@
 
-RcppDend 0.2 (2013-08-19)
+RcppDend 0.2.0 (2013-08-19)
 ----------------------------
+
+NEW R FUNCTIONS ADDED: 
+   * get_branches_heights - overrides dendextend function dendextend:::get_branches_heights function.
+
+NEW RCPP FUNCTIONS ADDED: 
+   * get_height
+   * push_back_heights
+   * Rcpp_get_dend_heights
 
 OTHER NOTES:
    * Moved "is" function to a new file called "is_functions.cpp".
 Created a "is_functions.h" file for it, and made sure to call it from "labels_dendrogram.cpp"
+   * 
 
 
 

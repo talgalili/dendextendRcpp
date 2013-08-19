@@ -20,8 +20,8 @@ GNU General Public License for more details.
 */
 
 
-#ifndef PLAYER_H    // To make sure you don't declare the function more than once by including the header multiple times.
-#define PLAYER_H
+//#ifndef PLAYER_H    // To make sure you don't declare the function more than once by including the header multiple times.
+//#define PLAYER_H
 
 #include <Rcpp.h>
 using namespace Rcpp;
@@ -31,4 +31,4 @@ bool is_string(RObject x);
 bool is_logical(RObject x);
 bool is_leaf(RObject x);
 
-#endif
+//#endif
