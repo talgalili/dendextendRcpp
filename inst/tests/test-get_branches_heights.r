@@ -8,7 +8,7 @@ test_that("get_branches_heights works",{
    dend <- as.dendrogram(hclust(dist(USArrests)))
 
    require(dendextend)
-   expect_identical(RcppDend:::get_branches_heights(dend),
+   expect_identical(dendextendRcpp:::get_branches_heights(dend),
                     dendextend:::get_branches_heights(dend))
    
 
@@ -16,7 +16,7 @@ test_that("get_branches_heights works",{
    
 #    require(microbenchmark)
 #    microbenchmark(
-#       RcppDend:::get_branches_heights(dend),
+#       dendextendRcpp:::get_branches_heights(dend),
 #       dendextend:::get_branches_heights(dend)
 #    )
 #    # Rcpp is 50 times faster...

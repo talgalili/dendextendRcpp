@@ -1,6 +1,6 @@
 # Copyright (C) Tal Galili
 #
-# This file is part of RcppDend.
+# This file is part of dendextendRcpp.
 #
 # dendextend is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -57,7 +57,7 @@
 #' 
 #' require(microbenchmark)
 #' microbenchmark(
-#'    RcppDend:::get_branches_heights(dend),
+#'    dendextendRcpp:::get_branches_heights(dend),
 #'    dendextend:::get_branches_heights(dend,sort=F)
 #' )
 #' # Rcpp is about 40-107 times faster!
@@ -73,6 +73,6 @@ get_branches_heights <- function (tree, sort = TRUE, decreasing = FALSE, ...)
 
 
 
-# detach( 'package:RcppDend', unload=TRUE )
-# require( 'RcppDend' )
+# detach( 'package:dendextendRcpp', unload=TRUE )
+# require( 'dendextendRcpp' )
 # labels(dend)

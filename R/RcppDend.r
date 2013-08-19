@@ -1,6 +1,6 @@
 # Copyright (C) Tal Galili
 #
-# This file is part of RcppDend.
+# This file is part of dendextendRcpp.
 #
 # dendextend is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -18,5 +18,5 @@
 
 NULL;
 
-# detach( 'package:RcppDend', unload=TRUE )
-# require( 'RcppDend' )
+# detach( 'package:dendextendRcpp', unload=TRUE )
+# require( 'dendextendRcpp' )

@@ -1,5 +1,5 @@
 
-RcppDend 0.2.0 (2013-08-19)
+dendextendRcpp 0.2.0 (2013-08-19)
 ----------------------------
 
 NEW R FUNCTIONS ADDED: 
@@ -21,9 +21,10 @@ Created a "is_functions.hpp" file for it, and made sure to call it from "labels_
 BUG FIXES
    * labels.dendrogram - now returns a label also if the tree is just a leaf.
 
+THE PACKAGE IS NOW RENAMED:
+   * from RcppDend to dendextendRcpp - in order to have it easier to remember (at least for me).
 
-
-RcppDend 0.1.1 (2013-08-17)
+dendextendRcpp 0.1.1 (2013-08-17)
 ----------------------------
 
 BUG FIXES
@@ -36,7 +37,7 @@ OTHER NOTES:
 
 
 
-RcppDend 0.1.0 (2013-08-16)
+dendextendRcpp 0.1.0 (2013-08-16)
 ----------------------------
 
 NEW R FUNCTIONS ADDED: 

@@ -1,4 +1,4 @@
-Package: RcppDend
+Package: dendextendRcpp
 Type: Package
 Title: Faster dendrogram manipulation using Rcpp
 Version: 0.2.0
@@ -12,7 +12,7 @@ Description: This package offers faster manipulation of dendrogram objects in
     Naturally, such function are rather slow in R, but can become much faster
     thank to Rcpp.
 License: GPL-2 | GPL-3
-URL: https://github.com/talgalili/RcppDend/
+URL: https://github.com/talgalili/dendextendRcpp/
 Depends:
     Rcpp (>= 0.10.3)
 Suggests:

@@ -1,6 +1,6 @@
 library(testthat)
-library(RcppDend)
+library(dendextendRcpp)
 
-test_package("RcppDend")
+test_package("dendextendRcpp")
 # test_dir("inst\\tests")
 

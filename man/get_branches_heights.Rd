@@ -51,7 +51,7 @@ get_branches_heights(dend,sort=F)
 
 require(microbenchmark)
 microbenchmark(
-   RcppDend:::get_branches_heights(dend),
+   dendextendRcpp:::get_branches_heights(dend),
    dendextend:::get_branches_heights(dend,sort=F)
 )
 # Rcpp is about 40-107 times faster!

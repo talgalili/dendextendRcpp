@@ -1,4 +1,4 @@
-# RcppDend
+# dendextendRcpp
 
 ## Introduction
 
@@ -20,20 +20,20 @@ R.
 To install the stable version on CRAN:
 
 ```r
-# install.packages('RcppDend') # not yet available from CRAN
+# install.packages('dendextendRcpp') # not yet available from CRAN
 ```
 
 To install the GitHub version:
 
 ```r
 if (!require('devtools')) install.packages('devtools'); require('devtools')
-install_github('RcppDend', 'talgalili')
+install_github('dendextendRcpp', 'talgalili')
 ```
 
 ## Usage
 
 ```r
-library(RcppDend)
+library(dendextendRcpp)
 
 hc <- hclust(dist(USArrests))
 dend <- as.dendrogram(hc)
@@ -42,7 +42,7 @@ labels(dend)
 
 require(microbenchmark)
 microbenchmark(stats:::labels.dendrogram(dend),
-               RcppDend:::labels.dendrogram(dend),
+               dendextendRcpp:::labels.dendrogram(dend),
                times = 100)
 # about 30 times faster. It is faster the larger the tree is.
 
@@ -51,8 +51,8 @@ microbenchmark(stats:::labels.dendrogram(dend),
 ## Contact
 
 You are welcome to:
-* submit suggestions and bug-reports at: <https://github.com/talgalili/RcppDend/issues>
-* send a pull request on: <https://github.com/talgalili/RcppDend/>
+* submit suggestions and bug-reports at: <https://github.com/talgalili/dendextendRcpp/issues>
+* send a pull request on: <https://github.com/talgalili/dendextendRcpp/>
 * compose a friendly e-mail to: <tal.galili@math.tau.ac.il>
 
 

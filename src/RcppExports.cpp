@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // Rcpp_get_dend_heights
 std::vector<double> Rcpp_get_dend_heights(List x, bool labels_heights = false, bool branches_heights = true);
-RcppExport SEXP RcppDend_Rcpp_get_dend_heights(SEXP xSEXP, SEXP labels_heightsSEXP, SEXP branches_heightsSEXP) {
+RcppExport SEXP dendextendRcpp_Rcpp_get_dend_heights(SEXP xSEXP, SEXP labels_heightsSEXP, SEXP branches_heightsSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
@@ -24,7 +24,7 @@ END_RCPP
 }
 // Rcpp_k_per_height
 int Rcpp_k_per_height(List x, double height);
-RcppExport SEXP RcppDend_Rcpp_k_per_height(SEXP xSEXP, SEXP heightSEXP) {
+RcppExport SEXP dendextendRcpp_Rcpp_k_per_height(SEXP xSEXP, SEXP heightSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
@@ -40,7 +40,7 @@ END_RCPP
 }
 // Rcpp_k_per_heights
 IntegerVector Rcpp_k_per_heights(List x, NumericVector heights);
-RcppExport SEXP RcppDend_Rcpp_k_per_heights(SEXP xSEXP, SEXP heightsSEXP) {
+RcppExport SEXP dendextendRcpp_Rcpp_k_per_heights(SEXP xSEXP, SEXP heightsSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
@@ -56,7 +56,7 @@ END_RCPP
 }
 // is_list
 bool is_list(RObject x);
-RcppExport SEXP RcppDend_is_list(SEXP xSEXP) {
+RcppExport SEXP dendextendRcpp_is_list(SEXP xSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
@@ -71,7 +71,7 @@ END_RCPP
 }
 // is_leaf
 bool is_leaf(RObject x);
-RcppExport SEXP RcppDend_is_leaf(SEXP xSEXP) {
+RcppExport SEXP dendextendRcpp_is_leaf(SEXP xSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
@@ -86,7 +86,7 @@ END_RCPP
 }
 // Rcpp_labels_dendrogram
 std::vector<std::string> Rcpp_labels_dendrogram(List x);
-RcppExport SEXP RcppDend_Rcpp_labels_dendrogram(SEXP xSEXP) {
+RcppExport SEXP dendextendRcpp_Rcpp_labels_dendrogram(SEXP xSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
@@ -101,7 +101,7 @@ END_RCPP
 }
 // Rcpp_count_leaves
 int Rcpp_count_leaves(List data);
-RcppExport SEXP RcppDend_Rcpp_count_leaves(SEXP dataSEXP) {
+RcppExport SEXP dendextendRcpp_Rcpp_count_leaves(SEXP dataSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {

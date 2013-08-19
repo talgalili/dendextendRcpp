@@ -27,7 +27,7 @@ labels(dend)
 
 require(microbenchmark)
 microbenchmark(stats:::labels.dendrogram(dend),
-               RcppDend:::labels.dendrogram(dend),
+               dendextendRcpp:::labels.dendrogram(dend),
                times = 100)
 # about 30 times faster. It is faster the larger the tree is.
 }

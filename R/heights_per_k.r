@@ -1,6 +1,6 @@
 # Copyright (C) Tal Galili
 #
-# This file is part of RcppDend.
+# This file is part of dendextendRcpp.
 #
 # dendextend is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -48,8 +48,8 @@
 #' dend = as.dendrogram(hclust(dist(iris[1:30,-5])))
 #' dend = as.dendrogram(hclust(dist(iris[1:3,-5])))
 #' microbenchmark(
-#'    #    RcppDend:::heights_per_k.dendrogram(dend),
-#'    RcppDend:::heights_per_k.dendrogram(dend),
+#'    #    dendextendRcpp:::heights_per_k.dendrogram(dend),
+#'    dendextendRcpp:::heights_per_k.dendrogram(dend),
 #'    dendextend:::heights_per_k.dendrogram(dend)
 #' )
 #' # improvment is 10 times faster (in Rcpp) for a tree of size 3
@@ -63,7 +63,7 @@ heights_per_k.dendrogram <- function(tree,...)
    # returns a vector of heights, and the k clusters we'll get for each of them.
    
    our_dend_heights <- sort(unique(get_branches_heights(tree, sort = FALSE)), TRUE)
-   # notice that get_branches_heights is a function on RcppDend
+   # notice that get_branches_heights is a function on dendextendRcpp
    
    heights_to_remove_for_A_cut <- min(-diff(our_dend_heights))/2 # the height to add so to be sure we get a "clear" cut
    heights_to_cut_by <- c((max(our_dend_heights) + heights_to_remove_for_A_cut),   # adding the height for 1 clusters only (this is not mandetory and could be different or removed)
@@ -77,6 +77,6 @@ heights_per_k.dendrogram <- function(tree,...)
 
 
 
-# detach( 'package:RcppDend', unload=TRUE )
-# require( 'RcppDend' )
+# detach( 'package:dendextendRcpp', unload=TRUE )
+# require( 'dendextendRcpp' )
 # labels(dend)

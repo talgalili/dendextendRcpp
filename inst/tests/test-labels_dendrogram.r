@@ -1,5 +1,5 @@
 # require(testthat)
-# require(RcppDend)
+# require(dendextendRcpp)
 
 context("labels.dendrogram with and without Rcpp")
 
@@ -10,7 +10,7 @@ test_that("Rcpp_labels_dendrogram works",{
 #    
 #    # because USArrests has no row names, hence - it is creating a dendrogram
 #    # with integer labels
-#    expect_warning(RcppDend:::labels.dendrogram(dend0))
+#    expect_warning(dendextendRcpp:::labels.dendrogram(dend0))
    
    dend <- as.dendrogram(hclust(dist(USArrests)))
    # plot(dend)
@@ -18,20 +18,20 @@ test_that("Rcpp_labels_dendrogram works",{
    expect_identical(length(Rcpp_labels_dendrogram(dend)), 50L)
    
    expect_identical(stats:::labels.dendrogram(dend),
-                    RcppDend:::labels.dendrogram(dend) )   
+                    dendextendRcpp:::labels.dendrogram(dend) )   
    
    # doesn't work for labels which are integers, here is an example:
    no_rownames_USArrests <- USArrests
    rownames(no_rownames_USArrests) <- NULL
    no_rownames_dend <- as.dendrogram(hclust(dist(no_rownames_USArrests)))   
-   expect_warning(RcppDend:::labels.dendrogram(no_rownames_dend)) # we reverted to  stats:::labels.dendrogram(dend)
+   expect_warning(dendextendRcpp:::labels.dendrogram(no_rownames_dend)) # we reverted to  stats:::labels.dendrogram(dend)
 
    one_leaf <- dend[[1]][[1]][[1]]
    # plot(one_leaf)
    expect_identical(labels(one_leaf), "Florida")
-#    RcppDend:::labels.dendrogram(one_leaf)
-#    RcppDend:::get_label
-#    RcppDend:::Rcpp_labels_dendrogram(one_leaf)
+#    dendextendRcpp:::labels.dendrogram(one_leaf)
+#    dendextendRcpp:::get_label
+#    dendextendRcpp:::Rcpp_labels_dendrogram(one_leaf)
 #    dendextend:::labels.dendrogram(one_leaf)
    
 })
@@ -39,7 +39,7 @@ test_that("Rcpp_labels_dendrogram works",{
 
 
 
-test_that("NA acts differently for stats vs RcppDend",{
+test_that("NA acts differently for stats vs dendextendRcpp",{
    # Wo   
    # get a dendrogram:
    #    data(iris) 
@@ -55,7 +55,7 @@ test_that("NA acts differently for stats vs RcppDend",{
    
    # notice that for Rcpp this would be false since the returned vector
    # has "NA" characters instead of NA:
-   expect_false(any(is.na(RcppDend:::labels.dendrogram(as.dendrogram(hc_sub_dend_iris )))))
+   expect_false(any(is.na(dendextendRcpp:::labels.dendrogram(as.dendrogram(hc_sub_dend_iris )))))
    # e.g: "NA" "3"  "NA" "NA" "4"  "7" 
    #    a[which(a == "NA")] <- NA # this is NOT a good idea, in the case we have a label with "NA" as a character.
    

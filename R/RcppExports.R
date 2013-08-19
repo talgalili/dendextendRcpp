@@ -2,30 +2,30 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 Rcpp_get_dend_heights <- function(x, labels_heights = FALSE, branches_heights = TRUE) {
-    .Call('RcppDend_Rcpp_get_dend_heights', PACKAGE = 'RcppDend', x, labels_heights, branches_heights)
+    .Call('dendextendRcpp_Rcpp_get_dend_heights', PACKAGE = 'dendextendRcpp', x, labels_heights, branches_heights)
 }
 
 Rcpp_k_per_height <- function(x, height) {
-    .Call('RcppDend_Rcpp_k_per_height', PACKAGE = 'RcppDend', x, height)
+    .Call('dendextendRcpp_Rcpp_k_per_height', PACKAGE = 'dendextendRcpp', x, height)
 }
 
 Rcpp_k_per_heights <- function(x, heights) {
-    .Call('RcppDend_Rcpp_k_per_heights', PACKAGE = 'RcppDend', x, heights)
+    .Call('dendextendRcpp_Rcpp_k_per_heights', PACKAGE = 'dendextendRcpp', x, heights)
 }
 
 is_list <- function(x) {
-    .Call('RcppDend_is_list', PACKAGE = 'RcppDend', x)
+    .Call('dendextendRcpp_is_list', PACKAGE = 'dendextendRcpp', x)
 }
 
 is_leaf <- function(x) {
-    .Call('RcppDend_is_leaf', PACKAGE = 'RcppDend', x)
+    .Call('dendextendRcpp_is_leaf', PACKAGE = 'dendextendRcpp', x)
 }
 
 Rcpp_labels_dendrogram <- function(x) {
-    .Call('RcppDend_Rcpp_labels_dendrogram', PACKAGE = 'RcppDend', x)
+    .Call('dendextendRcpp_Rcpp_labels_dendrogram', PACKAGE = 'dendextendRcpp', x)
 }
 
 Rcpp_count_leaves <- function(data) {
-    .Call('RcppDend_Rcpp_count_leaves', PACKAGE = 'RcppDend', data)
+    .Call('dendextendRcpp_Rcpp_count_leaves', PACKAGE = 'dendextendRcpp', data)
 }
 

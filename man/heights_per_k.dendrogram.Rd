@@ -38,8 +38,8 @@ dend = as.dendrogram(hclust(dist(iris[1:150,-5])))
 dend = as.dendrogram(hclust(dist(iris[1:30,-5])))
 dend = as.dendrogram(hclust(dist(iris[1:3,-5])))
 microbenchmark(
-   #    RcppDend:::heights_per_k.dendrogram(dend),
-   RcppDend:::heights_per_k.dendrogram(dend),
+   #    dendextendRcpp:::heights_per_k.dendrogram(dend),
+   dendextendRcpp:::heights_per_k.dendrogram(dend),
    dendextend:::heights_per_k.dendrogram(dend)
 )
 # improvment is 10 times faster (in Rcpp) for a tree of size 3

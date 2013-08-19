@@ -1,6 +1,6 @@
 # Copyright (C) Tal Galili
 #
-# This file is part of RcppDend.
+# This file is part of dendextendRcpp.
 #
 # dendextend is free software: you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -40,7 +40,7 @@
 #' 
 #' require(microbenchmark)
 #' microbenchmark(stats:::labels.dendrogram(dend),
-#'                RcppDend:::labels.dendrogram(dend),
+#'                dendextendRcpp:::labels.dendrogram(dend),
 #'                times = 100)
 #' # about 30 times faster. It is faster the larger the tree is.
 labels.dendrogram <- function(object,...) {
@@ -58,6 +58,6 @@ labels.dendrogram <- function(object,...) {
 
 
 
-# detach( 'package:RcppDend', unload=TRUE )
-# require( 'RcppDend' )
+# detach( 'package:dendextendRcpp', unload=TRUE )
+# require( 'dendextendRcpp' )
 # labels(dend)
