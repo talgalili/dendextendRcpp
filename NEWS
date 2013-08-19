@@ -1,3 +1,13 @@
+
+RcppDend 0.2 (2013-08-19)
+----------------------------
+
+OTHER NOTES:
+   * Moved "is" function to a new file called "is_functions.cpp".
+Created a "is_functions.h" file for it, and made sure to call it from "labels_dendrogram.cpp"
+
+
+
 RcppDend 0.1.1 (2013-08-17)
 ----------------------------
 

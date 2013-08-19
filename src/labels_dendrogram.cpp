@@ -23,31 +23,9 @@ GNU General Public License for more details.
 using namespace Rcpp;
 
 
-// check if an R object is a list
-bool is_list(RObject x){
-    return TYPEOF(x) == VECSXP ;
-}
+#include "is_functions.h"
 
-// check if an R object is a string
-bool is_string(RObject x){
-    return TYPEOF(x) == STRSXP && Rf_length(x) == 1 ;
-}
 
-// check if an R object is logical
-bool is_logical(RObject x){
-    return TYPEOF(x) == LGLSXP && Rf_length(x) == 1 ;
-}
-
-// check if an R object is a leaf - e.g: that it has the leaf attr - and that 
-// it is TRUE.
-bool is_leaf(RObject x){
-//   if( TYPEOF(x) != REALSXP ) return false ;  // x can be of any R type, it should NOT be restricted to typeof(x)=="double" only...
-   if (!x.hasAttribute("leaf")) return false ;  // if we don't have a "leaf" than FALSE.
-//   if( !is_logical( x.attr("leaf") ) ) return false ; // if it is not logical, I want it to crash on the next line...
-// it is better for the function to crash because of a bad "leaf" attr, than to return FALSE and mislead the user that everything is o.k.
-   bool leaf = x.attr( "leaf" ) ;
-   return leaf; // either TRUE or FALSE. But often, if it exists - it is TRUE.
-}
 
 // Extract the label attr from an R object
 // Only works for a character label (will crash in case of an integer value)
