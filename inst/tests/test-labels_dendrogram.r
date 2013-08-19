@@ -39,6 +39,39 @@ test_that("Rcpp_labels_dendrogram works",{
 
 
 
+test_that("NA acts differently for stats vs RcppDend",{
+   # Wo   
+   # get a dendrogram:
+   #    data(iris) 
+   d_iris <- dist(iris[1:10,-5])
+   hc_iris <- hclust(d_iris)
+   dend_iris <- as.dendrogram(hc_iris) # as.hclust.dendrogram - of course
+   
+   # taking a subset of the dendrogram:
+   sub_dend_iris <- dend_iris[[1]]   
+   hc_sub_dend_iris <- as.hclust(sub_dend_iris)
+   # We will have NA's:
+   expect_true(any(is.na(stats:::labels.dendrogram(as.dendrogram(hc_sub_dend_iris )))))
+   
+   # notice that for Rcpp this would be false since the returned vector
+   # has "NA" characters instead of NA:
+   expect_false(any(is.na(RcppDend:::labels.dendrogram(as.dendrogram(hc_sub_dend_iris )))))
+   # e.g: "NA" "3"  "NA" "NA" "4"  "7" 
+   #    a[which(a == "NA")] <- NA # this is NOT a good idea, in the case we have a label with "NA" as a character.
+   
+   
+   # we will get warnings, but the functions would not collapse!
+   
+})
+
+
+
+
+
+
+
+
+
 test_that("Rcpp_count_leaves works",{
    dend <- as.dendrogram(hclust(dist(USArrests)))
    
@@ -48,3 +81,5 @@ test_that("Rcpp_count_leaves works",{
    )   
    
 })
+
+
