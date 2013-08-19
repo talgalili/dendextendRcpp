@@ -4,11 +4,14 @@ RcppDend 0.2.0 (2013-08-19)
 
 NEW R FUNCTIONS ADDED: 
    * get_branches_heights - overrides dendextend function dendextend:::get_branches_heights function.
+   * heights_per_k.dendrogram - gives a 10 to 130(!) faster loading times.
 
 NEW RCPP FUNCTIONS ADDED: 
    * get_height
    * push_back_heights
    * Rcpp_get_dend_heights
+   * Rcpp_k_per_height
+   * Rcpp_k_per_heights (plural)
 
 OTHER NOTES:
    * Moved "is" function to a new file called "is_functions.cpp".
