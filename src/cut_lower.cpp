@@ -58,7 +58,26 @@ void find_dend_for_height( List tree, std::vector<RObject>& lower, double height
 
 
 // [[Rcpp::export]]
-std::vector<RObject> Rcpp_cut_lower(List tree, double height, bool nodes_into_dend=true){
+std::vector<RObject> Rcpp_cut_lower(List x, double height, bool nodes_into_dend=true){
+   
+   // This line:
+   List tree = clone(x);
+   // Is essential for making this happen:
+//   require(dendextendRcpp)
+//   dend = as.dendrogram(hclust(dist(iris[1:4,-5])))
+//   Rcpp_cut_lower(dend, .14,F)
+//   cut_lower_fun(dend, .14, labels)
+//   Rcpp_cut_lower(dend, .14,F) # it would be different without clone!
+//   lapply(cut(dend, .14)$lower, labels)
+//
+//      require(microbenchmark)
+//      microbenchmark(
+//         new = cut_lower_fun(dend, .14, labels),
+//         old = lapply(cut(dend, .14)$lower, labels)
+//      )
+//      # ~7 times faster for a n=4 tree
+//      # ~13 times faster for a n=150 tree
+
    
    std::vector<RObject> lower; // create the returned vector   
    
@@ -71,8 +90,9 @@ std::vector<RObject> Rcpp_cut_lower(List tree, double height, bool nodes_into_de
       
    // this would make us not need to turn the nodes into 
    // dendrograms in order to run the functions on them
-   // the time improvement is HUGE!
-   if(nodes_into_dend) { // This seems to always be "true" - might be worth checking
+   // the time improvement is significant - IF this was needed...
+   if(nodes_into_dend) {       
+      // the next few lines are to discover the length of "lower"
       List lower_list(wrap(lower));
       int n = lower_list.size();
       
