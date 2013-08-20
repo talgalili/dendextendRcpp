@@ -6,7 +6,7 @@
 using namespace Rcpp;
 
 // Rcpp_cut_lower
-std::vector<SEXP> Rcpp_cut_lower(List tree, double height);
+std::vector<RObject> Rcpp_cut_lower(List tree, double height);
 RcppExport SEXP dendextendRcpp_Rcpp_cut_lower(SEXP treeSEXP, SEXP heightSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
@@ -14,7 +14,7 @@ BEGIN_RCPP
         Rcpp::RNGScope __rngScope;
         List tree = Rcpp::as<List >(treeSEXP);
         double height = Rcpp::as<double >(heightSEXP);
-        std::vector<SEXP> __result = Rcpp_cut_lower(tree, height);
+        std::vector<RObject> __result = Rcpp_cut_lower(tree, height);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);

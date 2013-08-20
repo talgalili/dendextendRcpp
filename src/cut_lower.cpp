@@ -27,7 +27,7 @@ using namespace Rcpp;
 
 
 
-void find_dend_for_height( List tree, std::vector<SEXP>& lower, double height){
+void find_dend_for_height( List tree, std::vector<RObject>& lower, double height){
    
 //    Rcout << "The tree's height is: " << get_height(tree) << "\n";       
 //    Rcout << "The height to compare to is: " << height << "\n";       
@@ -43,6 +43,9 @@ void find_dend_for_height( List tree, std::vector<SEXP>& lower, double height){
                // When we reach a leaf
                // this is always a new cluster
             lower.push_back(tree[i]);         
+//            List tree_to_push=tree[i];
+//            RObject(tree_to_push).attr("class") = "dendrogram";
+//            lower.push_back(tree_to_push);         
          } else {
                // else:
                // add all the relevant dends underneath this node:
@@ -55,9 +58,9 @@ void find_dend_for_height( List tree, std::vector<SEXP>& lower, double height){
 
 
 // [[Rcpp::export]]
-std::vector<SEXP> Rcpp_cut_lower(List tree, double height){
+std::vector<RObject> Rcpp_cut_lower(List tree, double height){
    
-   std::vector<SEXP> lower; // create the returned vector   
+   std::vector<RObject> lower; // create the returned vector   
    
    if(is_leaf( tree )) {      
       lower.push_back(tree[0]);

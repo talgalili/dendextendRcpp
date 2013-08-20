@@ -1,6 +1,6 @@
 \name{cut_lower_fun}
 \alias{cut_lower_fun}
-\title{Find Labels from a dendrogram Object using Rcpp}
+\title{Cut a dendrogram using Rcpp - and run a function on the output}
 \usage{
   cut_lower_fun(tree, h, FUN = labels, warn = FALSE, ...)
 }
@@ -16,9 +16,8 @@
   \item{...}{passed to FUN.}
 }
 \value{
-  A vector of labels from the dendrogram leaves. This is
-  often a character vector, but there are cases it might be
-  integer.
+  A list with the output of running FUN on each of the sub
+  trees derived from cutting "tree"
 }
 \description{
   Cuts the a tree at height h and returns a list with the
@@ -32,15 +31,23 @@
   size it is used on).
 }
 \examples{
-dend <- as.dendrogram(hclust(dist(USArrests)))
+dend = as.dendrogram(hclust(dist(iris[1:4,-5])))
+Rcpp_cut_lower(dend, .4)
+# this is really cool!
+cut_lower_fun(dend, .4, labels)
+lapply(cut(dend, h = .4)$lower, labels)
+cut_lower_fun(dend, .4, order.dendrogram)
 
-labels(dend)
-
-require(microbenchmark)
-microbenchmark(stats:::labels.dendrogram(dend),
-               dendextendRcpp:::labels.dendrogram(dend),
-               times = 100)
-# about 30 times faster. It is faster the larger the tree is.
+\dontrun{
+   require(dendextend)
+   require(dendextendRcpp)
+   dend_big = as.dendrogram(hclust(dist(iris[1:150,-5])))
+   require(microbenchmark)
+   microbenchmark(old_cut_lower_fun(dend_big,4),
+                  dendextendRcpp:::cut_lower_fun(dend_big,4),
+                     times = 100)
+   # about 20 times faster. It is faster the larger the tree is.
+}
 }
 \author{
   Tal Galili

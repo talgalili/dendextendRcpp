@@ -27,5 +27,5 @@ Collate:
     'labels_dendrogram.r'
     'RcppDend.r'
     'zzz.r'
-    'cut_lower_labels.r'
+    'cut_lower_fun.r'
 LinkingTo: Rcpp
