@@ -4,7 +4,9 @@ NEW R FUNCTIONS ADDED:
    * cut_lower_fun - overrides dendextend function - will give a 4-16 times faster cutree(h) function for R!
 
 NEW RCPP FUNCTIONS ADDED: 
-   * Rcpp_cut_lower (+find_dend_for_height)
+   * Rcpp_cut_lower (+find_dend_for_height).
+      This function changes the output of the nodes to be of dendrogram class
+      which enables the fast operation of functions on them!
 
 dendextendRcpp 0.2.1 (2013-08-20)
 ----------------------------

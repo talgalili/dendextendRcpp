@@ -6,15 +6,16 @@
 using namespace Rcpp;
 
 // Rcpp_cut_lower
-std::vector<RObject> Rcpp_cut_lower(List tree, double height);
-RcppExport SEXP dendextendRcpp_Rcpp_cut_lower(SEXP treeSEXP, SEXP heightSEXP) {
+std::vector<RObject> Rcpp_cut_lower(List tree, double height, bool nodes_into_dend = true);
+RcppExport SEXP dendextendRcpp_Rcpp_cut_lower(SEXP treeSEXP, SEXP heightSEXP, SEXP nodes_into_dendSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
         List tree = Rcpp::as<List >(treeSEXP);
         double height = Rcpp::as<double >(heightSEXP);
-        std::vector<RObject> __result = Rcpp_cut_lower(tree, height);
+        bool nodes_into_dend = Rcpp::as<bool >(nodes_into_dendSEXP);
+        std::vector<RObject> __result = Rcpp_cut_lower(tree, height, nodes_into_dend);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);

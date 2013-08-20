@@ -58,7 +58,7 @@ void find_dend_for_height( List tree, std::vector<RObject>& lower, double height
 
 
 // [[Rcpp::export]]
-std::vector<RObject> Rcpp_cut_lower(List tree, double height){
+std::vector<RObject> Rcpp_cut_lower(List tree, double height, bool nodes_into_dend=true){
    
    std::vector<RObject> lower; // create the returned vector   
    
@@ -68,6 +68,21 @@ std::vector<RObject> Rcpp_cut_lower(List tree, double height){
    } else {
       find_dend_for_height(tree, lower, height);   
    }      
+      
+   // this would make us not need to turn the nodes into 
+   // dendrograms in order to run the functions on them
+   // the time improvement is HUGE!
+   if(nodes_into_dend) { // This seems to always be "true" - might be worth checking
+      List lower_list(wrap(lower));
+      int n = lower_list.size();
+      
+      for(int i = 0; i < n; ++i) {
+                  RObject temp_lower_node = lower[i];
+                  temp_lower_node.attr("class") = "dendrogram";
+          }         
+   }
+   
+   
    return(lower) ;
 }
 
