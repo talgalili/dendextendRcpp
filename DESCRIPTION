@@ -1,10 +1,12 @@
 Package: dendextendRcpp
 Type: Package
 Title: Faster dendrogram manipulation using Rcpp
-Version: 0.2.1
+Version: 0.3.0
 Date: 2013-08-20
-Author: Romain Francois, Dirk Eddelbuettel, Tal Galili
-Maintainer: Tal Galili <tal.galili@math.tau.ac.il>
+Authors@R: c(person("Tal Galili", "Developer", role = c("aut", "cre", "ctb"),
+    email = "tal.galili@math.tau.ac.il"),
+    person("Romain Francois", "Developer", role = "ctb"),
+    person("Dirk Eddelbuettel", "Developer", role = "ctb"))
 Description: This package offers faster manipulation of dendrogram objects in
     R. A dendrogram object in R are is a list structure with attributes in its
     nodes and leaves. Working with dendrogram objects often require a function
@@ -25,4 +27,5 @@ Collate:
     'labels_dendrogram.r'
     'RcppDend.r'
     'zzz.r'
+    'cut_lower_labels.r'
 LinkingTo: Rcpp
