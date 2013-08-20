@@ -63,6 +63,7 @@ void push_back_labels( List data, std::vector<std::string>& the_labels){
 
 // [[Rcpp::export]]
 std::vector<std::string> Rcpp_labels_dendrogram(List x){   
+
    std::vector<std::string> the_labels;   
    
 //   // For some reason - this doesn't work - so I fixed it in the R code...

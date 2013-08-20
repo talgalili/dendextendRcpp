@@ -5,6 +5,22 @@
 
 using namespace Rcpp;
 
+// Rcpp_cut_lower
+std::vector<SEXP> Rcpp_cut_lower(List tree, double height);
+RcppExport SEXP dendextendRcpp_Rcpp_cut_lower(SEXP treeSEXP, SEXP heightSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        List tree = Rcpp::as<List >(treeSEXP);
+        double height = Rcpp::as<double >(heightSEXP);
+        std::vector<SEXP> __result = Rcpp_cut_lower(tree, height);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
 // Rcpp_get_dend_heights
 std::vector<double> Rcpp_get_dend_heights(List x, bool labels_heights = false, bool branches_heights = true);
 RcppExport SEXP dendextendRcpp_Rcpp_get_dend_heights(SEXP xSEXP, SEXP labels_heightsSEXP, SEXP branches_heightsSEXP) {

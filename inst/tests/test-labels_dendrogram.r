@@ -24,7 +24,7 @@ test_that("Rcpp_labels_dendrogram works",{
    no_rownames_USArrests <- USArrests
    rownames(no_rownames_USArrests) <- NULL
    no_rownames_dend <- as.dendrogram(hclust(dist(no_rownames_USArrests)))   
-   expect_warning(dendextendRcpp:::labels.dendrogram(no_rownames_dend)) # we reverted to  stats:::labels.dendrogram(dend)
+   expect_warning(dendextendRcpp:::labels.dendrogram(no_rownames_dend, warn = TRUE)) # we reverted to  stats:::labels.dendrogram(dend)
 
    one_leaf <- dend[[1]][[1]][[1]]
    # plot(one_leaf)

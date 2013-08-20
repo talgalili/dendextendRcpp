@@ -1,9 +1,16 @@
+dendextendRcpp 0.3.0 (2013-08-20)
+----------------------------
+NEW R FUNCTIONS ADDED: 
+   * cut_lower_fun - overrides dendextend function - will give a 4-16 times faster cutree(h) function for R!
+
+NEW RCPP FUNCTIONS ADDED: 
+   * Rcpp_cut_lower (+find_dend_for_height)
 
 dendextendRcpp 0.2.1 (2013-08-20)
 ----------------------------
 OTHER NOTES:
    * added zzz.r file - with code to override dendextend functions in case dendextendRcpp is loaded AFTER dendextend.
-
+   * fixed Rcpp_labels_dendrogram works test - adjusting for the new "warn" parameter.
 
 dendextendRcpp 0.2.0 (2013-08-19)
 ----------------------------
