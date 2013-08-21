@@ -76,3 +76,37 @@ test_that("cut_lower_fun works",{
 })
 
 
+
+if(FALSE) {
+   
+   
+   require(dendextendRcpp)
+   dend = as.dendrogram(hclust(dist(iris[1:4,-5])))
+   Rcpp_cut_lower(dend, .14,F)
+   cut_lower_fun(dend, .14, labels)
+   Rcpp_cut_lower(dend, .14,F) # it is now different!
+   lapply(cut(dend, .14)$lower, labels)
+
+   # some quick tests for speed:
+   
+   
+   require(microbenchmark)
+   dend = as.dendrogram(hclust(dist(iris[1:50,-5])))
+   microbenchmark(
+      new = cut_lower_fun(dend, .14, labels),
+      old = lapply(cut(dend, .14)$lower, labels)
+   )
+   # ~11.5
+   # ~7 times faster for a n=4 tree
+   # ~13 times faster for a n=150 tree
+   
+}
+
+
+
+
+
+
+
+
+

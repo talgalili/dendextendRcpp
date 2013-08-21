@@ -93,8 +93,12 @@ std::vector<RObject> Rcpp_cut_lower(List x, double height, bool nodes_into_dend=
    // the time improvement is significant - IF this was needed...
    if(nodes_into_dend) {       
       // the next few lines are to discover the length of "lower"
+
+      // one way of getting n:
       List lower_list(wrap(lower));
       int n = lower_list.size();
+      // another way, thanks to Kevin Ushey:
+//      int n = Rf_length(wrap(lower));
       
       for(int i = 0; i < n; ++i) {
                   RObject temp_lower_node = lower[i];
