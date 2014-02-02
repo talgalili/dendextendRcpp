@@ -2,10 +2,10 @@
 \alias{labels.dendrogram}
 \title{Find Labels from a dendrogram Object using Rcpp}
 \source{
-  R-devel-mailing list.
+R-devel-mailing list.
 }
 \usage{
-  \method{labels}{dendrogram}(object, ...)
+\method{labels}{dendrogram}(object, ...)
 }
 \arguments{
   \item{object}{a dendrogram object.}
@@ -17,12 +17,12 @@
   \item{...}{not used.}
 }
 \value{
-  A vector of labels from the dendrogram leaves. This is
-  often a character vector, but there are cases it might be
-  integer.
+A vector of labels from the dendrogram leaves. This is
+often a character vector, but there are cases it might be
+integer.
 }
 \description{
-  Extract the leaves labels from a dendrogram object.
+Extract the leaves labels from a dendrogram object.
 }
 \examples{
 dend <- as.dendrogram(hclust(dist(USArrests)))
@@ -36,9 +36,9 @@ microbenchmark(stats:::labels.dendrogram(dend),
 # about 30 times faster. It is faster the larger the tree is.
 }
 \author{
-  Romain Francois, Dirk Eddelbuettel, Tal Galili
+Romain Francois, Dirk Eddelbuettel, Tal Galili
 }
 \seealso{
-  \code{\link{labels}}, \code{\link{dendrogram}}
+\code{\link{labels}}, \code{\link{dendrogram}}
 }
 

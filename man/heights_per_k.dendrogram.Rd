@@ -2,7 +2,7 @@
 \alias{heights_per_k.dendrogram}
 \title{Which height will result in which k for a dendrogram}
 \usage{
-  heights_per_k.dendrogram(tree, ...)
+heights_per_k.dendrogram(tree, ...)
 }
 \arguments{
   \item{tree}{a dendrogram.}
@@ -10,16 +10,15 @@
   \item{...}{not used.}
 }
 \value{
-  a vector of heights, with its names being the k clusters
-  that will result for cutting the dendrogram at each
-  height.
+a vector of heights, with its names being the k clusters
+that will result for cutting the dendrogram at each height.
 }
 \description{
-  This is the Rcpp version of the heights_per_k.dendrogram
-  from the dendextend R package. It is intended to override
-  that function in order to get a speed gain of ranging
-  from 10 times faster (for a tree with 3 leaves), to 130
-  times (!) faster (for a tree with 150 leaves).
+This is the Rcpp version of the heights_per_k.dendrogram
+from the dendextend R package. It is intended to override
+that function in order to get a speed gain of ranging from
+10 times faster (for a tree with 3 leaves), to 130 times
+(!) faster (for a tree with 150 leaves).
 }
 \examples{
 \dontrun{

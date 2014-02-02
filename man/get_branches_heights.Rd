@@ -2,8 +2,7 @@
 \alias{get_branches_heights}
 \title{Get branches height attr from a dendrogram}
 \usage{
-  get_branches_heights(tree, sort = TRUE,
-    decreasing = FALSE, ...)
+get_branches_heights(tree, sort = TRUE, decreasing = FALSE, ...)
 }
 \arguments{
   \item{tree}{a dendrogram object.}
@@ -18,15 +17,15 @@
   \item{...}{not used.}
 }
 \value{
-  A numeric vector of the dendrogram's nodes heights
-  (excluding leaves).
+A numeric vector of the dendrogram's nodes heights
+(excluding leaves).
 }
 \description{
-  Get branches height attributes from a dendrogram.
+Get branches height attributes from a dendrogram.
 
-  This function is intended to override
-  \code{\link[dendextend]{get_branches_heights}}. Since it
-  is 40-100 times faster.
+This function is intended to override
+\code{\link[dendextend]{get_branches_heights}}. Since it is
+40-100 times faster.
 }
 \examples{
 \dontrun{
@@ -58,10 +57,10 @@ microbenchmark(
 }
 }
 \author{
-  Tal Galili
+Tal Galili
 }
 \seealso{
-  \code{\link{labels}}, \code{\link{dendrogram}},
-  \code{\link{attr}}
+\code{\link{labels}}, \code{\link{dendrogram}},
+\code{\link{attr}}
 }
 

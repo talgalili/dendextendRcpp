@@ -1,12 +1,12 @@
 Package: dendextendRcpp
 Type: Package
 Title: Faster dendrogram manipulation using Rcpp
-Version: 0.3.0
-Date: 2013-08-20
-Authors@R: c(person("Tal Galili", "Developer", role = c("aut", "cre", "ctb"),
-    email = "tal.galili@math.tau.ac.il"),
-    person("Romain Francois", "Developer", role = "ctb"),
-    person("Dirk Eddelbuettel", "Developer", role = "ctb"))
+Version: 0.3.1
+Date: 2014-02-02
+Authors@R: c(person("Tal", "Galili", role = c("aut", "cre", "cph"), email =
+    "tal.galili@gmail.com", comment = "http://www.r-statistics.com"),
+    person("Romain", "Francois", role = "ctb"), person("Dirk", "Eddelbuettel",
+    role = "ctb"), person("Yoav", "Benjamini", role = "ths"))
 Description: This package offers faster manipulation of dendrogram objects in
     R. A dendrogram object in R are is a list structure with attributes in its
     nodes and leaves. Working with dendrogram objects often require a function
@@ -16,16 +16,9 @@ Description: This package offers faster manipulation of dendrogram objects in
 License: GPL-2 | GPL-3
 URL: https://github.com/talgalili/dendextendRcpp/
 Depends:
-    Rcpp (>= 0.10.3)
+    Rcpp (>= 0.10.3),
+    dendextend (>= 0.12.0)
 Suggests:
     testthat,
     microbenchmark
-Collate:
-    'RcppExports.R'
-    'get_dend_heights.r'
-    'heights_per_k.r'
-    'labels_dendrogram.r'
-    'RcppDend.r'
-    'zzz.r'
-    'cut_lower_fun.r'
 LinkingTo: Rcpp

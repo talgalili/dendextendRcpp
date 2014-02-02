@@ -1,3 +1,15 @@
+dendextendRcpp 0.3.1 (2014-02-02)
+----------------------------
+UPDATED FUNCTIONS:
+   * assign_dendextendRcpp_to_dendextend 
+      * added old_cut_lower_fun
+      * Fixed the assignment of "old_" to "make sense"... (they are now added to dendextendRcpp enviornment)
+
+OTHER NOTES:
+   * Fixed Authors@R in DESCRIPTION
+   * Fixes to indentation and some Rcpp modified code
+
+
 dendextendRcpp 0.3.0 (2013-08-20)
 ----------------------------
 NEW R FUNCTIONS ADDED: 

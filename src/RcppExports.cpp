@@ -12,9 +12,9 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        List x = Rcpp::as<List >(xSEXP);
-        double height = Rcpp::as<double >(heightSEXP);
-        bool nodes_into_dend = Rcpp::as<bool >(nodes_into_dendSEXP);
+        Rcpp::traits::input_parameter< List >::type x(xSEXP );
+        Rcpp::traits::input_parameter< double >::type height(heightSEXP );
+        Rcpp::traits::input_parameter< bool >::type nodes_into_dend(nodes_into_dendSEXP );
         std::vector<RObject> __result = Rcpp_cut_lower(x, height, nodes_into_dend);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
@@ -29,9 +29,9 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        List x = Rcpp::as<List >(xSEXP);
-        bool labels_heights = Rcpp::as<bool >(labels_heightsSEXP);
-        bool branches_heights = Rcpp::as<bool >(branches_heightsSEXP);
+        Rcpp::traits::input_parameter< List >::type x(xSEXP );
+        Rcpp::traits::input_parameter< bool >::type labels_heights(labels_heightsSEXP );
+        Rcpp::traits::input_parameter< bool >::type branches_heights(branches_heightsSEXP );
         std::vector<double> __result = Rcpp_get_dend_heights(x, labels_heights, branches_heights);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
@@ -46,8 +46,8 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        List x = Rcpp::as<List >(xSEXP);
-        double height = Rcpp::as<double >(heightSEXP);
+        Rcpp::traits::input_parameter< List >::type x(xSEXP );
+        Rcpp::traits::input_parameter< double >::type height(heightSEXP );
         int __result = Rcpp_k_per_height(x, height);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
@@ -62,8 +62,8 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        List x = Rcpp::as<List >(xSEXP);
-        NumericVector heights = Rcpp::as<NumericVector >(heightsSEXP);
+        Rcpp::traits::input_parameter< List >::type x(xSEXP );
+        Rcpp::traits::input_parameter< NumericVector >::type heights(heightsSEXP );
         IntegerVector __result = Rcpp_k_per_heights(x, heights);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
@@ -78,7 +78,7 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        RObject x = Rcpp::as<RObject >(xSEXP);
+        Rcpp::traits::input_parameter< RObject >::type x(xSEXP );
         bool __result = is_list(x);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
@@ -93,7 +93,7 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        RObject x = Rcpp::as<RObject >(xSEXP);
+        Rcpp::traits::input_parameter< RObject >::type x(xSEXP );
         bool __result = is_leaf(x);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
@@ -108,7 +108,7 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        List x = Rcpp::as<List >(xSEXP);
+        Rcpp::traits::input_parameter< List >::type x(xSEXP );
         std::vector<std::string> __result = Rcpp_labels_dendrogram(x);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
@@ -123,7 +123,7 @@ BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
-        List data = Rcpp::as<List >(dataSEXP);
+        Rcpp::traits::input_parameter< List >::type data(dataSEXP );
         int __result = Rcpp_count_leaves(data);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
