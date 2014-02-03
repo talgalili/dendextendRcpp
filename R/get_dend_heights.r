@@ -57,8 +57,8 @@
 #' 
 #' require(microbenchmark)
 #' microbenchmark(
-#'    dendextendRcpp:::get_branches_heights(dend),
-#'    dendextend:::get_branches_heights(dend,sort=F)
+#'    dendextendRcpp::get_branches_heights(dend),
+#'    old_get_branches_heights(dend,sort=F)
 #' )
 #' # Rcpp is about 40-107 times faster!
 #' }
