@@ -5,7 +5,7 @@
 R-devel-mailing list.
 }
 \usage{
-\method{labels}{dendrogram}(object, ...)
+\method{labels}{dendrogram}(object, warn=FALSE, ...)
 }
 \arguments{
   \item{object}{a dendrogram object.}

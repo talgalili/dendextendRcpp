@@ -24,7 +24,7 @@
 #' @description 
 #' Extract the leaves labels from a dendrogram object.
 #' @usage
-#' \method{labels}{dendrogram}(object, ...)
+#' \method{labels}{dendrogram}(object, warn=FALSE, ...)
 #' @param object a dendrogram object.
 #' @param warn logical (FALSE) - should the user be warned if reverting to
 #' default? (I set it to FALSE since it can be very noisy sometimes...)
