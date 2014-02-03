@@ -21,6 +21,8 @@ OTHER NOTES:
    * Fixed: cut_lower_labels -> cut_lower_fun
    * Added importFrom in order to fix "Packages in Depends field not imported from:"
 
+   * dendextend 0.3.2 is intended to be shipped to CRAN. (first release!)
+
 dendextendRcpp 0.3.1 (2014-02-02)
 ----------------------------
 UPDATED R FUNCTIONS:
