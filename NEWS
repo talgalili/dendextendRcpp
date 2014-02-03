@@ -12,6 +12,7 @@ DOCS:
    * Added aliases to: 'old_cut_lower_fun', 'old_get_branches_heights',  'old_heights_per_k.dendrogram'. Thus fixing "checking for missing documentation entries ... WARNING - Undocumented code objects:"
    * Fix: Codoc mismatches from documentation object 'labels.dendrogram'
    * cut_lower_fun - fix "cutree" links (to go to exact package)
+   * Fix: Undocumented arguments in documentation object 'cut_lower_fun'
 
 OTHER NOTES:
    * some minor updated to README.md

@@ -14,6 +14,8 @@ cut_lower_fun(tree, h, FUN = labels, warn = FALSE, ...)
   if reverting to default? (I set it to FALSE since it can
   be very noisy sometimes...)}
 
+  \item{FUN}{the function to run (default is "labels")}
+
   \item{...}{passed to FUN.}
 }
 \value{

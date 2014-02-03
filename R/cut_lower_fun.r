@@ -35,6 +35,7 @@
 #' @param h a scalar of height to cut the tree by.
 #' @param warn logical (FALSE) - should the user be warned if reverting to
 #' default? (I set it to FALSE since it can be very noisy sometimes...)
+#' @param FUN the function to run (default is "labels")
 #' @param ... passed to FUN.
 #' @return A list with the output of running FUN on each of the 
 #' sub trees derived from cutting "tree"
