@@ -18,6 +18,7 @@ DOCS:
 
 OTHER NOTES:
    * some minor updated to README.md
+   * Fixed: cut_lower_labels -> cut_lower_fun
    * Added importFrom in order to fix "Packages in Depends field not imported from:"
 
 dendextendRcpp 0.3.1 (2014-02-02)

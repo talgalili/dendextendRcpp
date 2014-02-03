@@ -187,6 +187,7 @@ assign_dendextendRcpp_to_dendextend <- function() {
 ### http://www.rstudio.com/ide/docs/packages/build_options
 # check(build_args="--no-build-vignettes --no-manual", args = "--no-examples --no-build-vignettes --no-manual",  cran = FALSE, cleanup = FALSE)
 # check(build_args="--no-build-vignettes ", args = "--no-build-vignettes",  cran = FALSE, cleanup = FALSE)
+# 
 # check(args="--as-cran",document=FALSE) # I need to not check the documents since this seem to force a NAMESPACE change...
 # check(args="--as-cran")
 # check("D:/Dropbox/aaaa good R code/AA - My packages/dendextend", args="--as-cran")
