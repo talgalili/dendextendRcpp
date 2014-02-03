@@ -13,6 +13,7 @@ DOCS:
    * Fix: Codoc mismatches from documentation object 'labels.dendrogram'
    * cut_lower_fun - fix "cutree" links (to go to exact package)
    * Fix: Undocumented arguments in documentation object 'cut_lower_fun'
+   * Rcpp_cut_lower -> dendextendRcpp::Rcpp_cut_lower
 
 OTHER NOTES:
    * some minor updated to README.md
