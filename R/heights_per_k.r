@@ -26,6 +26,8 @@
 #' ranging from 10 times faster (for a tree with 3 leaves), to 130 times (!) 
 #' faster (for a tree with 150 leaves).
 #' @export
+#' @aliases
+#' old_heights_per_k.dendrogram
 #' @param tree a dendrogram.
 #' @param ... not used.
 #' @return a vector of heights, with its names being the k clusters that will

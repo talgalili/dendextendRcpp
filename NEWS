@@ -8,6 +8,9 @@ UPDATED R FUNCTIONS:
 TESTS:
    * dendextend::: ->  old_
 
+DOCS:
+   * Added aliases to: 'old_cut_lower_fun', 'old_get_branches_heights',  'old_heights_per_k.dendrogram'. Thus fixing "checking for missing documentation entries ... WARNING - Undocumented code objects:"
+
 OTHER NOTES:
    * some minor updated to README.md
 

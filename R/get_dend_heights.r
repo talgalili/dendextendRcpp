@@ -20,6 +20,8 @@
 
 #' @title Get branches height attr from a dendrogram
 #' @export
+#' @aliases
+#' old_get_branches_heights
 #' @description 
 #' Get branches height attributes from a dendrogram.
 #' 
