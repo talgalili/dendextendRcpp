@@ -22,6 +22,7 @@
 #' @export
 #' @aliases
 #' old_cut_lower_fun
+#' Rcpp_cut_lower
 #' @description 
 #' Cuts the a tree at height h and returns a list with the FUN function
 #' implemented on all the sub trees created by cut at height h.

@@ -1,4 +1,7 @@
 \name{heights_per_k.dendrogram}
+\alias{Rcpp_get_dend_heights}
+\alias{Rcpp_k_per_height}
+\alias{Rcpp_k_per_heights}
 \alias{heights_per_k.dendrogram}
 \alias{old_heights_per_k.dendrogram}
 \title{Which height will result in which k for a dendrogram}

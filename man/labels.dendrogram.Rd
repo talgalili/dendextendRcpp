@@ -1,5 +1,7 @@
 \name{labels.dendrogram}
+\alias{Rcpp_labels_dendrogram}
 \alias{labels.dendrogram}
+\alias{stats_labels.dendrogram}
 \title{Find Labels from a dendrogram Object using Rcpp}
 \source{
 R-devel-mailing list.

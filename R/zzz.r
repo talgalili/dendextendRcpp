@@ -129,6 +129,23 @@ assign_dendextendRcpp_to_dendextend <- function() {
 }
 
 
+
+# ' @import dendextend
+# ' @import Rcpp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # detach( 'package:dendextendRcpp', unload=TRUE )
 # require( 'dendextendRcpp' )
 

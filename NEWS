@@ -14,10 +14,11 @@ DOCS:
    * cut_lower_fun - fix "cutree" links (to go to exact package)
    * Fix: Undocumented arguments in documentation object 'cut_lower_fun'
    * Rcpp_cut_lower -> dendextendRcpp::Rcpp_cut_lower
+   * Undocumented code objects - added aliases
 
 OTHER NOTES:
    * some minor updated to README.md
-
+   * Added importFrom in order to fix "Packages in Depends field not imported from:"
 
 dendextendRcpp 0.3.1 (2014-02-02)
 ----------------------------

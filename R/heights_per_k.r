@@ -28,6 +28,9 @@
 #' @export
 #' @aliases
 #' old_heights_per_k.dendrogram
+#' Rcpp_get_dend_heights
+#' Rcpp_k_per_height
+#' Rcpp_k_per_heights
 #' @param tree a dendrogram.
 #' @param ... not used.
 #' @return a vector of heights, with its names being the k clusters that will

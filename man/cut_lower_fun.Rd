@@ -1,4 +1,5 @@
 \name{cut_lower_fun}
+\alias{Rcpp_cut_lower}
 \alias{cut_lower_fun}
 \alias{old_cut_lower_fun}
 \title{Cut a dendrogram using Rcpp - and run a function on the output}
