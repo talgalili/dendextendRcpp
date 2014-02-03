@@ -10,9 +10,9 @@ test_that("heights_per_k.dendrogram works",{
    #'    dendextendRcpp:::heights_per_k.dendrogram(dend),
    #'    dendextend:::heights_per_k.dendrogram(dend)
    
-   require(dendextend)
-   expect_identical(dendextendRcpp:::heights_per_k.dendrogram(dend),
-                    dendextend:::heights_per_k.dendrogram(dend))
+#    require(dendextend)
+   expect_identical(dendextendRcpp::heights_per_k.dendrogram(dend),
+                    old_heights_per_k.dendrogram(dend))
    
 
    

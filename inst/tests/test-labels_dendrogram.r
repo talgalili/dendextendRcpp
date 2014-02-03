@@ -18,13 +18,13 @@ test_that("Rcpp_labels_dendrogram works",{
    expect_identical(length(Rcpp_labels_dendrogram(dend)), 50L)
    
    expect_identical(stats:::labels.dendrogram(dend),
-                    dendextendRcpp:::labels.dendrogram(dend) )   
-   
+                    dendextendRcpp::labels.dendrogram(dend) )   
+      
    # doesn't work for labels which are integers, here is an example:
    no_rownames_USArrests <- USArrests
    rownames(no_rownames_USArrests) <- NULL
    no_rownames_dend <- as.dendrogram(hclust(dist(no_rownames_USArrests)))   
-   expect_warning(dendextendRcpp:::labels.dendrogram(no_rownames_dend, warn = TRUE)) # we reverted to  stats:::labels.dendrogram(dend)
+   expect_warning(dendextendRcpp::labels.dendrogram(no_rownames_dend, warn = TRUE)) # we reverted to  stats:::labels.dendrogram(dend)
 
    one_leaf <- dend[[1]][[1]][[1]]
    # plot(one_leaf)
@@ -55,7 +55,7 @@ test_that("NA acts differently for stats vs dendextendRcpp",{
    
    # notice that for Rcpp this would be false since the returned vector
    # has "NA" characters instead of NA:
-   expect_false(any(is.na(dendextendRcpp:::labels.dendrogram(as.dendrogram(hc_sub_dend_iris )))))
+   expect_false(any(is.na(dendextendRcpp::labels.dendrogram(as.dendrogram(hc_sub_dend_iris )))))
    # e.g: "NA" "3"  "NA" "NA" "4"  "7" 
    #    a[which(a == "NA")] <- NA # this is NOT a good idea, in the case we have a label with "NA" as a character.
    

@@ -27,7 +27,7 @@ To install the GitHub version:
 
 ```r
 if (!require('devtools')) install.packages('devtools'); require('devtools')
-install_github('dendextendRcpp', 'talgalili')
+install_github('talgalili/dendextendRcpp')
 ```
 
 ## Usage
@@ -42,15 +42,16 @@ labels(dend)
 
 require(microbenchmark)
 microbenchmark(stats:::labels.dendrogram(dend),
-               dendextendRcpp:::labels.dendrogram(dend),
+               dendextendRcpp::labels.dendrogram(dend),
                times = 100)
-# about 30 times faster. It is faster the larger the tree is.
+# about 10-30 times faster. It is faster the larger the tree is.
 
 ```
 
 ## Contact
 
 You are welcome to:
+
 * submit suggestions and bug-reports at: <https://github.com/talgalili/dendextendRcpp/issues>
 * send a pull request on: <https://github.com/talgalili/dendextendRcpp/>
 * compose a friendly e-mail to: <tal.galili@math.tau.ac.il>
@@ -59,6 +60,9 @@ You are welcome to:
 ## Available functions
 
 * labels.dendrogram (or simply labels)
+* cut_lower_fun
+* get_branches_heights
+* heights_per_k.dendrogram
 
 
 ## MORE INFORMATION

@@ -12,6 +12,8 @@ test_that("cut_lower_fun works",{
       cut_lower_fun(dend, .4, labels),
       lapply(cut(dend, h = .4)$lower, labels)   
    )
+   
+#    dendextendRcpp:::Rcpp_cut_lower(dend, .4, labels)
 
    expect_identical(
       cut_lower_fun(dend, 0, labels),
