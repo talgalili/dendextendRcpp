@@ -40,7 +40,7 @@
 #' sub trees derived from cutting "tree"
 #' @author Tal Galili
 #' @seealso \code{\link{labels}}, \code{\link{dendrogram}},
-#' \link[dendextend]{cutree.dendrogram}
+#' \link[dendextend]{cutree} (in dendextend), \link[stats]{cutree} (in stats)
 #' @examples
 #' 
 #' dend = as.dendrogram(hclust(dist(iris[1:4,-5])))
@@ -63,8 +63,8 @@
 #' }
 #' 
 cut_lower_fun <- function(tree, h, FUN = labels, warn = FALSE, ...) {
-   
-   if(!inherits(tree, "dendrogram")) stop("'tree' needs to be a dendrogram. Aborting the function 'cut_lower_labels'.")
+   # is.dendrogram is from dendextend
+   if(!is.dendrogram(tree)) stop("'tree' needs to be a dendrogram. Aborting the function 'cut_lower_labels'.")
    
    if(is.leaf(tree)) return(list(FUN(tree)))
    # else:

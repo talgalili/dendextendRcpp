@@ -56,6 +56,7 @@ Tal Galili
 }
 \seealso{
 \code{\link{labels}}, \code{\link{dendrogram}},
-\link[dendextend]{cutree.dendrogram}
+\link[dendextend]{cutree} (in dendextend),
+\link[stats]{cutree} (in stats)
 }
 
