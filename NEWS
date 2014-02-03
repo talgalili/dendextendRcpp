@@ -1,6 +1,20 @@
+dendextendRcpp 0.3.2 (2014-02-03)
+----------------------------
+
+UPDATED R FUNCTIONS:
+   * assign_dendextendRcpp_to_dendextend - remove require(dendextend)
+   * stats:::labels.dendrogram -> stats_labels.dendrogram (in the new imports_stats.r file)
+
+TESTS:
+   * dendextend::: ->  old_
+
+OTHER NOTES:
+   * some minor updated to README.md
+
+
 dendextendRcpp 0.3.1 (2014-02-02)
 ----------------------------
-UPDATED FUNCTIONS:
+UPDATED R FUNCTIONS:
    * assign_dendextendRcpp_to_dendextend 
       * added old_cut_lower_fun
       * Fixed the assignment of "old_" to "make sense"... (they are now added to dendextendRcpp enviornment)

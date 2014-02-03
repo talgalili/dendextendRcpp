@@ -50,7 +50,7 @@
 #' Rcpp_get_dend_heights(dend,T,F)
 #' Rcpp_get_dend_heights(dend,T,F)
 #' 
-#' require(dendextend)
+#' # require(dendextend)
 #' Rcpp_get_dend_heights(dend)
 #' get_branches_heights(dend,sort=F)
 #' 

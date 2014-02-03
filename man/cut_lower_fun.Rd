@@ -40,7 +40,7 @@ lapply(cut(dend, h = .4)$lower, labels)
 cut_lower_fun(dend, .4, order.dendrogram)
 
 \dontrun{
-   require(dendextend)
+   # require(dendextend)
    require(dendextendRcpp)
    dend_big = as.dendrogram(hclust(dist(iris[1:150,-5])))
    require(microbenchmark)

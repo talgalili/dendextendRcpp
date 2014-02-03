@@ -17,14 +17,14 @@ test_that("Rcpp_labels_dendrogram works",{
    
    expect_identical(length(Rcpp_labels_dendrogram(dend)), 50L)
    
-   expect_identical(stats:::labels.dendrogram(dend),
+   expect_identical(stats_labels.dendrogram(dend),
                     dendextendRcpp::labels.dendrogram(dend) )   
       
    # doesn't work for labels which are integers, here is an example:
    no_rownames_USArrests <- USArrests
    rownames(no_rownames_USArrests) <- NULL
    no_rownames_dend <- as.dendrogram(hclust(dist(no_rownames_USArrests)))   
-   expect_warning(dendextendRcpp::labels.dendrogram(no_rownames_dend, warn = TRUE)) # we reverted to  stats:::labels.dendrogram(dend)
+   expect_warning(dendextendRcpp::labels.dendrogram(no_rownames_dend, warn = TRUE)) # we reverted to  stats_labels.dendrogram(dend)
 
    one_leaf <- dend[[1]][[1]][[1]]
    # plot(one_leaf)
@@ -51,7 +51,7 @@ test_that("NA acts differently for stats vs dendextendRcpp",{
    sub_dend_iris <- dend_iris[[1]]   
    hc_sub_dend_iris <- as.hclust(sub_dend_iris)
    # We will have NA's:
-   expect_true(any(is.na(stats:::labels.dendrogram(as.dendrogram(hc_sub_dend_iris )))))
+   expect_true(any(is.na(stats_labels.dendrogram(as.dendrogram(hc_sub_dend_iris )))))
    
    # notice that for Rcpp this would be false since the returned vector
    # has "NA" characters instead of NA:

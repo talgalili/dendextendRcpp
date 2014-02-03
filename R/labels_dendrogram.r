@@ -41,7 +41,7 @@
 #' labels(dend)
 #' 
 #' require(microbenchmark)
-#' microbenchmark(stats:::labels.dendrogram(dend),
+#' microbenchmark(stats_labels.dendrogram(dend),
 #'                dendextendRcpp:::labels.dendrogram(dend),
 #'                times = 100)
 #' # about 30 times faster. It is faster the larger the tree is.
@@ -54,7 +54,7 @@ labels.dendrogram <- function(object,warn = FALSE, ...) {
       if(warn) warning("Your tree's labels are not 'character'. Hence the 'labels' function can not use the Rcpp function \n and is expected to be 20 to 40 times SLOWER! \n In order to fix this, simply run on your tree:\n labels(tree)<-as.character(labels(tree)) \n This function is in the {dendextend} R package \n Do it once - and many functions which rely on the tree 'labels' will run faster. :) ")
    })
    # else: (in case of integer labels)
-   return(stats:::labels.dendrogram(object))
+   return(stats_labels.dendrogram(object))
 }
 
 
