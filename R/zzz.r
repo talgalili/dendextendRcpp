@@ -184,14 +184,13 @@ assign_dendextendRcpp_to_dendextend <- function() {
 # when a function is renamed, its document in man must be removed - otherwise it may cause problems with the built check (it will try to run the code in the example, and will fail.)
 # When all is done, run:
 # require(devtools)
-# check()
+# check(document=FALSE)
 # browseURL(tempdir())
 ### http://www.rstudio.com/ide/docs/packages/build_options
 # check(build_args="--no-build-vignettes --no-manual", args = "--no-examples --no-build-vignettes --no-manual",  cran = FALSE, cleanup = FALSE)
 # check(build_args="--no-build-vignettes ", args = "--no-build-vignettes",  cran = FALSE, cleanup = FALSE)
 # 
 # check(args="--as-cran",document=FALSE) # I need to not check the documents since this seem to force a NAMESPACE change...
-# check(args="--as-cran")
 # require(devtools)
 # check("D:/Dropbox/aaaa good R code/AA - My packages/dendextendRcpp", args="--as-cran",document=FALSE)
 #                 Thanks to: http://stackoverflow.com/questions/10017702/r-cmd-check-options-for-more-rigorous-testing-2-15-0

@@ -12,6 +12,8 @@ UPDATED Rcpp FUNCTIONS:
 UPDATED DESCRIPTION:
    * added Kevin Ushey to Authors@R list (thanks to his patch)
 
+OTHER NOTES:
+   * dendextend 0.3.3 is intended to be shipped to CRAN. (first release!)
 
 
 
