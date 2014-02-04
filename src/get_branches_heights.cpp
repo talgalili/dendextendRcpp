@@ -21,7 +21,7 @@ GNU General Public License for more details.
 
 #include <Rcpp.h>
 using namespace Rcpp;
-#include "is_functions.hpp"
+#include "is_functions.h"
 
 
 
