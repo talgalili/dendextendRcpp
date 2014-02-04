@@ -1,3 +1,20 @@
+dendextendRcpp 0.3.3 (2014-02-04)
+----------------------------
+
+UPDATED R FUNCTIONS:
+   * assign_dendextendRcpp_to_dendextend - remove assign of old_ functions (we might as well just copy them manually)
+   * old_* functions moved to the new imports_dendextend.r file
+
+UPDATED Rcpp FUNCTIONS:
+   * patches for Rcpp 0.11.0, using as<RObject> to wrap some functions so that the package will compile. Props to Kevin Ushey!
+   * changed .hpp -> .h (for portability issues, props to Kurt Hornik)
+
+UPDATED DESCRIPTION:
+   * added Kevin Ushey to Authors@R list (thanks to his patch)
+
+
+
+
 dendextendRcpp 0.3.2 (2014-02-03)
 ----------------------------
 
@@ -21,7 +38,7 @@ OTHER NOTES:
    * Fixed: cut_lower_labels -> cut_lower_fun
    * Added importFrom in order to fix "Packages in Depends field not imported from:"
 
-   * dendextend 0.3.2 is intended to be shipped to CRAN. (first release!)
+   * dendextend 0.3.2 is intended to be shipped to CRAN. (first release! - failed after not working with Rcpp 0.11.0, though it did work for Rcpp 0.10.6)
 
 dendextendRcpp 0.3.1 (2014-02-02)
 ----------------------------
