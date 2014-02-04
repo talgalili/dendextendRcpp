@@ -32,8 +32,8 @@ void find_dend_for_height( List tree, std::vector<RObject>& lower, double height
 //    Rcout << "The tree's height is: " << get_height(tree) << "\n";       
 //    Rcout << "The height to compare to is: " << height << "\n";       
     
-   if(get_height(tree) <= height) {
-      lower.push_back(tree);
+   if(get_height( as<RObject>(tree) ) <= height) {
+      lower.push_back( as<RObject>(tree) );
       // no reason to keep going...
    } else {
 //      List tree(wrap(tree));
@@ -81,7 +81,7 @@ std::vector<RObject> Rcpp_cut_lower(List x, double height, bool nodes_into_dend=
    
    std::vector<RObject> lower; // create the returned vector   
    
-   if(is_leaf( tree )) {      
+   if( is_leaf( as<RObject>(tree) )) {      
       lower.push_back(tree[0]);
 //      return(tree);
    } else {

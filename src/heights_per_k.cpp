@@ -50,7 +50,7 @@ int find_k_per_height( List tree, double height){
 //    Rcout << "The tree's height is: " << get_height(tree) << "\n";       
 //    Rcout << "The height to compare to is: " << height << "\n";       
     
-   if(get_height(tree) <= height) {
+   if(get_height( as<RObject>(tree) ) <= height) {
       return 1; //    current_k is 1
       // no reason to keep going...
    } 
@@ -74,7 +74,7 @@ int find_k_per_height( List tree, double height){
 
 // [[Rcpp::export]]
 int Rcpp_k_per_height(List x, double height){
-   if(is_leaf( x )) {
+   if(is_leaf( as<RObject>(x) )) {
       return 1; //    current_k is 1      
    }
    
