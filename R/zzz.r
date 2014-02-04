@@ -38,9 +38,11 @@ assign_dendextendRcpp_to_dendextend <- function() {
       
       # create a backup of these functions in order to later
       # compare them using benchmark (their kept invisible - but can be accessed)
-      assign("old_get_branches_heights", get_branches_heights, pos=as.environment("package:dendextendRcpp"))
-      assign("old_heights_per_k.dendrogram", heights_per_k.dendrogram, pos=as.environment("package:dendextendRcpp"))
-      assign("old_cut_lower_fun", cut_lower_fun, pos=as.environment("package:dendextendRcpp"))
+      
+      # I just ended up making a manual copy of these objects...
+#       assign("old_get_branches_heights", get_branches_heights, envir=as.environment("package:dendextendRcpp"))
+#       assign("old_heights_per_k.dendrogram", heights_per_k.dendrogram, envir=as.environment("package:dendextendRcpp"))
+#       assign("old_cut_lower_fun", cut_lower_fun, envir=as.environment("package:dendextendRcpp"))
 
       # Using this:
       # assign("old_cut_lower_fun", dendextend::cut_lower_fun, envir=as.environment("package:dendextendRcpp"))
