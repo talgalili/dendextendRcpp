@@ -48,7 +48,7 @@ void push_back_heights( List data, std::vector<double>& the_heights,
 //   The Rcout are commented in order to not through too many comments to the user...
 //    Rcout << "List with " << data.size() << " elements\n";
    if(branches_heights) {
-      double x_height = get_height(data);
+      double x_height = get_height( as<RObject>(data) );
       the_heights.push_back(x_height);               
    }
    
