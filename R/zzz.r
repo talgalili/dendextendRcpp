@@ -190,8 +190,10 @@ assign_dendextendRcpp_to_dendextend <- function() {
 # 
 # check(args="--as-cran",document=FALSE) # I need to not check the documents since this seem to force a NAMESPACE change...
 # check(args="--as-cran")
-# check("D:/Dropbox/aaaa good R code/AA - My packages/dendextend", args="--as-cran")
+# require(devtools)
+# check("D:/Dropbox/aaaa good R code/AA - My packages/dendextendRcpp", args="--as-cran",document=FALSE)
 #                 Thanks to: http://stackoverflow.com/questions/10017702/r-cmd-check-options-for-more-rigorous-testing-2-15-0
 # file.copy("NEWS", "NEWS.md")
 # build_win(version="R-devel")
+# release(check = FALSE)
 # release()
