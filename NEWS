@@ -1,3 +1,15 @@
+dendextendRcpp 0.4.0 (2014-03-01)
+----------------------------
+
+UPDATED R FUNCTIONS:
+   * assign_dendextendRcpp_to_dendextend - Moved to passing the functions through "options" instead of through assignInNamespace.
+
+OTHER NOTES:
+   * Version 0.4.0 of dendextendRcpp will not be effective for versions of dendextend which are before 0.13.0 (however, it would also not conflict with them...)
+   * dendextendRcpp 0.4.0 is intended to be shipped to CRAN.
+
+
+
 dendextendRcpp 0.3.3 (2014-02-04)
 ----------------------------
 

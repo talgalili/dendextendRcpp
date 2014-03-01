@@ -29,7 +29,7 @@ assign_dendextendRcpp_to_dendextend <- function() {
    # assigns the FASTER dendextendRcpp functions to override
    # the dendextend functions....
    
-   if(TRUE) { #  (suppressWarnings(require(dendextend))) {   # no need to check this since dendextendRcpp Depends on dendextend!
+#   if(TRUE) { #  (suppressWarnings(require(dendextend))) {   # no need to check this since dendextendRcpp Depends on dendextend!
       # This wouldn't work since it will only assign
       # the faster function in the current env      
       #       get_branches_heights <- dendextendRcpp::get_branches_heights
@@ -62,23 +62,37 @@ assign_dendextendRcpp_to_dendextend <- function() {
       # http://stackoverflow.com/questions/13595145/overriding-a-package-function-inherited-by-another-package
       # 	  get("assignInNamespace", envir=asNamespace("utils"))
       # Using only "::" instead of ":::" will crash many tests...
+
       
-      assignInNamespace(
-         x= "get_branches_heights",
-         value = dendextendRcpp:::get_branches_heights,
-         ns = "dendextend"
-      )   
-      assignInNamespace(
-         x= "heights_per_k.dendrogram",
-         value = dendextendRcpp:::heights_per_k.dendrogram,
-         ns = "dendextend"
-      )
-      assignInNamespace(
-         x= "cut_lower_fun",
-         value = dendextendRcpp:::cut_lower_fun,
-         ns = "dendextend"
-      )
-      
+#       # instead of assigining to the NAMESPACE, I'm moving to have the functions
+#       # reside in the "options" world...
+#       assignInNamespace(
+#          x= "get_branches_heights",
+#          value = dendextendRcpp:::get_branches_heights,
+#          ns = "dendextend"
+#       )   
+#       assignInNamespace(
+#          x= "heights_per_k.dendrogram",
+#          value = dendextendRcpp:::heights_per_k.dendrogram,
+#          ns = "dendextend"
+#       )
+#       assignInNamespace(
+#          x= "cut_lower_fun",
+#          value = dendextendRcpp:::cut_lower_fun,
+#          ns = "dendextend"
+#       )
+
+   options(dendextend_get_branches_heights = dendextendRcpp::get_branches_heights)
+   options(dendextend_heights_per_k.dendrogram = dendextendRcpp::heights_per_k.dendrogram)
+   options(dendextend_cut_lower_fun = dendextendRcpp::cut_lower_fun)
+
+   # http://stackoverflow.com/questions/21921304/r-package-development-overriding-a-function-from-one-package-with-a-function-fr
+   # http://stackoverflow.com/questions/15910113/what-where-are-the-attributes-of-a-function-object
+   # http://stackoverflow.com/questions/8501906/define-a-function-in-a-specific-namespace
+   
+   
+   
+   
 # dendextend:::cut_lower_fun
 # Good! this works...
 
@@ -92,16 +106,16 @@ assign_dendextendRcpp_to_dendextend <- function() {
       #    )
       
       
-      
-   } else {
-#       warning("
-#               The 'dendextend' package runs 
-#               MUCH faster when you also have the dendextendRcpp package installed.
-#               Please consider running:
-#               install.packages('dendextendRcpp')
-#               and then re-load dendextend.
-#               ")
-   }
+#       
+#    } else {
+# #       warning("
+# #               The 'dendextend' package runs 
+# #               MUCH faster when you also have the dendextendRcpp package installed.
+# #               Please consider running:
+# #               install.packages('dendextendRcpp')
+# #               and then re-load dendextend.
+# #               ")
+#    }
    
    }
 
