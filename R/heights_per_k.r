@@ -39,6 +39,8 @@
 #' @examples
 #' \dontrun{
 #' 
+#' dend = as.dendrogram(hclust(dist(iris[1:150,-5])))
+#' 
 #' # plutral heightS
 #' heights_per_k.dendrogram(dend,1)
 #' heights_per_k.dendrogram(dend,.5)
@@ -54,7 +56,7 @@
 #' dend = as.dendrogram(hclust(dist(iris[1:3,-5])))
 #' microbenchmark(
 #'    #    dendextendRcpp::heights_per_k.dendrogram(dend),
-#'    dendextendRcpp::heights_per_k.dendrogram(dend),
+#'    dendextendRcpp::dendextendRcpp_heights_per_k.dendrogram(dend),
 #'    old_heights_per_k.dendrogram(dend)
 #' )
 #' # improvment is 10 times faster (in Rcpp) for a tree of size 3
@@ -62,7 +64,7 @@
 #' # And:
 #' # 134 times faster for a tree of size 150!!
 #' }
-heights_per_k.dendrogram <- function(tree,...)
+dendextendRcpp_heights_per_k.dendrogram <- function(tree,...)
 {
    # gets a dendro tree
    # returns a vector of heights, and the k clusters we'll get for each of them.

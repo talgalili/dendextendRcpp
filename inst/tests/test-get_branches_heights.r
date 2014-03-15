@@ -11,7 +11,7 @@ test_that("get_branches_heights works",{
    # expect_identical(dendextendRcpp:::get_branches_heights(dend),
                     # dendextend:::get_branches_heights(dend))
    # The above will not work, since we mask this package inside the NAMESPACE...
-   expect_identical(dendextendRcpp::get_branches_heights(dend),
+   expect_identical(dendextendRcpp::dendextendRcpp_get_branches_heights(dend),
                     old_get_branches_heights(dend))
 
    

@@ -59,12 +59,12 @@
 #'    dend_big = as.dendrogram(hclust(dist(iris[1:150,-5])))
 #'    require(microbenchmark)
 #'    microbenchmark(old_cut_lower_fun(dend_big,.1),
-#'                   dendextendRcpp::cut_lower_fun(dend_big,.1),
+#'                   dendextendRcpp::dendextendRcpp_cut_lower_fun(dend_big,.1),
 #'                      times = 100)
 #'    # about 7-15 times faster. It is faster the larger the tree is, and the lower h is.
 #' }
 #' 
-cut_lower_fun <- function(tree, h, FUN = labels, warn = FALSE, ...) {
+dendextendRcpp_cut_lower_fun <- function(tree, h, FUN = labels, warn = FALSE, ...) {
    # is.dendrogram is from dendextend
    if(!is.dendrogram(tree)) stop("'tree' needs to be a dendrogram. Aborting the function 'cut_lower_fun'.")
    

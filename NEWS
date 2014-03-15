@@ -1,9 +1,16 @@
 dendextendRcpp 0.5.0 (2014-03-15)
 ----------------------------
 
+UPDATED R FUNCTIONS:
+   * renamed: 
+      * cut_lower_fun -> dendextendRcpp_cut_lower_fun
+      * get_branches_heights -> dendextendRcpp_get_branches_heights
+      * heights_per_k.dendrogram -> dendextendRcpp_heights_per_k.dendrogram
+
 OTHER NOTES:
    * Now works through "create_dendextend_options" (Thanks to suggestions by Kurt Hornik and Uwe Ligges).
    * dendextendRcpp 0.5.0 is intended to be shipped to CRAN.
+
 
 
 dendextendRcpp 0.4.0 (2014-03-01)
