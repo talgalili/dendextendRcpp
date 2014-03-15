@@ -54,7 +54,7 @@
 #' 
 #' # require(dendextend)
 #' Rcpp_get_dend_heights(dend)
-#' get_branches_heights(dend,sort=F)
+#' dendextendRcpp_get_branches_heights(dend,sort=F)
 #' 
 #' 
 #' require(microbenchmark)

@@ -6,6 +6,7 @@
 \alias{dendextendRcpp-package}
 \alias{is_leaf}
 \alias{is_list}
+\alias{remove_dendextendRcpp_options}
 \title{Functions for extending dendextend using Rcpp}
 \description{
 Functions for extending dendextend using Rcpp

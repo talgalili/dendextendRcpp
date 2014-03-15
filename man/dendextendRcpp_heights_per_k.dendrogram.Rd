@@ -27,14 +27,16 @@ that function in order to get a speed gain of ranging from
 \examples{
 \dontrun{
 
-# plutral heightS
-heights_per_k.dendrogram(dend,1)
-heights_per_k.dendrogram(dend,.5)
-heights_per_k.dendrogram(dend,0.05)
-heights_per_k.dendrogram(dend,0)
-heights_per_k.dendrogram(dend,-1)
+dend = as.dendrogram(hclust(dist(iris[1:150,-5])))
 
-heights_per_k.dendrogram(dend,c(1,.5,.2,0,-1))
+# plutral heightS
+dendextendRcpp_heights_per_k.dendrogram(dend,1)
+dendextendRcpp_heights_per_k.dendrogram(dend,.5)
+dendextendRcpp_heights_per_k.dendrogram(dend,0.05)
+dendextendRcpp_heights_per_k.dendrogram(dend,0)
+dendextendRcpp_heights_per_k.dendrogram(dend,-1)
+
+dendextendRcpp_heights_per_k.dendrogram(dend,c(1,.5,.2,0,-1))
 
 require(microbenchmark)
 dend = as.dendrogram(hclust(dist(iris[1:150,-5])))
@@ -43,7 +45,7 @@ dend = as.dendrogram(hclust(dist(iris[1:3,-5])))
 microbenchmark(
    #    dendextendRcpp::heights_per_k.dendrogram(dend),
    dendextendRcpp::dendextendRcpp_heights_per_k.dendrogram(dend),
-   old_heights_per_k.dendrogram(dend)
+   dendextend::old_heights_per_k.dendrogram(dend)
 )
 # improvment is 10 times faster (in Rcpp) for a tree of size 3
 # 76 times faster for a tree of size 30

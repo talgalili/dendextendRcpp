@@ -39,9 +39,9 @@ dend = as.dendrogram(hclust(dist(iris[1:4,-5])))
 dendextendRcpp::Rcpp_cut_lower(dend, .4)
 dendextendRcpp::Rcpp_cut_lower(dend, .4, FALSE)
 # this is really cool!
-cut_lower_fun(dend, .4, labels)
+dendextendRcpp_cut_lower_fun(dend, .4, labels)
 lapply(cut(dend, h = .4)$lower, labels)
-cut_lower_fun(dend, .4, order.dendrogram)
+dendextendRcpp_cut_lower_fun(dend, .4, order.dendrogram)
 
 \dontrun{
    # require(dendextend)
