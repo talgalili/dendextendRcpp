@@ -27,6 +27,7 @@
 #' dendextendRcpp
 #' Rcpp_count_leaves
 #' assign_dendextendRcpp_to_dendextend
+#' remove_dendextendRcpp_options
 #' is_leaf
 #' is_list
 #' @docType package
