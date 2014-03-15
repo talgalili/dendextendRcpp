@@ -82,10 +82,16 @@ assign_dendextendRcpp_to_dendextend <- function() {
 #          ns = "dendextend"
 #       )
 
-   options(dendextend_get_branches_heights = dendextendRcpp::get_branches_heights)
-   options(dendextend_heights_per_k.dendrogram = dendextendRcpp::heights_per_k.dendrogram)
-   options(dendextend_cut_lower_fun = dendextendRcpp::cut_lower_fun)
+   # options(dendextend_get_branches_heights = dendextendRcpp::get_branches_heights)
+   # options(dendextend_heights_per_k.dendrogram = dendextendRcpp::heights_per_k.dendrogram)
+   # options(dendextend_cut_lower_fun = dendextendRcpp::cut_lower_fun)
 
+   dendextend_options("get_branches_heights" , dendextendRcpp::get_branches_heights)
+   dendextend_options("heights_per_k.dendrogram" , dendextendRcpp::heights_per_k.dendrogram)
+   dendextend_options("cut_lower_fun" , dendextendRcpp::cut_lower_fun)
+   
+   # dendextend_options()
+   
    # http://stackoverflow.com/questions/21921304/r-package-development-overriding-a-function-from-one-package-with-a-function-fr
    # http://stackoverflow.com/questions/15910113/what-where-are-the-attributes-of-a-function-object
    # http://stackoverflow.com/questions/8501906/define-a-function-in-a-specific-namespace
@@ -123,12 +129,26 @@ assign_dendextendRcpp_to_dendextend <- function() {
 
 
 
+
+remove_dendextendRcpp_options <- function() { 
+   # assigns the functions which could later be replaced by the FASTER dendextendRcpp functions 
+#    options(dendextend_get_branches_heights = NULL)
+#    options(dendextend_heights_per_k.dendrogram = NULL)
+#    options(dendextend_cut_lower_fun = NULL)
+   dendextend::assign_dendextend_options()
+}
+   
+   
+   
+
 .onLoad <- function(libname, pkgname){
    # Thanks for Romain: http://stackoverflow.com/questions/4369334/first-lib-idiom-in-r-packages
    
    # adding and removing menus from the Rgui when loading and detaching the library
    # setHook(packageEvent("installr", "attach"), {function(pkgname, libpath) {add.installr.GUI()}  } )
    # setHook(packageEvent("installr", "detach"), {function(pkgname, libpath) {remove.installr.GUI()}  } )
+
+   setHook(packageEvent("dendextendRcpp", "detach"), {function(pkgname, libpath) {remove_dendextendRcpp_options()}  } )
    
 }
 

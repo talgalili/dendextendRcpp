@@ -1,3 +1,11 @@
+dendextendRcpp 0.5.0 (2014-03-15)
+----------------------------
+
+OTHER NOTES:
+   * Now works through "create_dendextend_options" (Thanks to suggestions by Kurt Hornik and Uwe Ligges).
+   * dendextendRcpp 0.5.0 is intended to be shipped to CRAN.
+
+
 dendextendRcpp 0.4.0 (2014-03-01)
 ----------------------------
 
