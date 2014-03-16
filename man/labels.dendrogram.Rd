@@ -31,11 +31,13 @@ dend <- as.dendrogram(hclust(dist(USArrests)))
 
 labels(dend)
 
+\dontrun{
 require(microbenchmark)
 microbenchmark(stats_labels.dendrogram(dend),
                dendextendRcpp::labels.dendrogram(dend),
                times = 100)
 # about 30 times faster. It is faster the larger the tree is.
+}
 }
 \author{
 Romain Francois, Dirk Eddelbuettel, Tal Galili

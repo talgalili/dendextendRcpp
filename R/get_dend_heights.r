@@ -56,13 +56,14 @@
 #' Rcpp_get_dend_heights(dend)
 #' dendextendRcpp_get_branches_heights(dend,sort=F)
 #' 
-#' 
+#' \dontrun{
 #' require(microbenchmark)
 #' microbenchmark(
 #'    dendextendRcpp::dendextendRcpp_get_branches_heights(dend),
 #'    old_get_branches_heights(dend,sort=F)
 #' )
 #' # Rcpp is about 40-107 times faster!
+#' }
 #' }
 dendextendRcpp_get_branches_heights <- function (tree, sort = TRUE, decreasing = FALSE, ...) 
 {

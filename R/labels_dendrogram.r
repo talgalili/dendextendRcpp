@@ -43,11 +43,13 @@
 #' 
 #' labels(dend)
 #' 
+#' \dontrun{
 #' require(microbenchmark)
 #' microbenchmark(stats_labels.dendrogram(dend),
 #'                dendextendRcpp::labels.dendrogram(dend),
 #'                times = 100)
 #' # about 30 times faster. It is faster the larger the tree is.
+#' }
 labels.dendrogram <- function(object,warn = FALSE, ...) {
    
    if(is.leaf(object)) return(attr(object, "label"))   

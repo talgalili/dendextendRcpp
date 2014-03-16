@@ -50,6 +50,7 @@
 #' 
 #' dendextendRcpp_heights_per_k.dendrogram(dend,c(1,.5,.2,0,-1))
 #' 
+#' \dontrun{
 #' require(microbenchmark)
 #' dend = as.dendrogram(hclust(dist(iris[1:150,-5])))
 #' dend = as.dendrogram(hclust(dist(iris[1:30,-5])))
@@ -63,6 +64,7 @@
 #' # 76 times faster for a tree of size 30
 #' # And:
 #' # 134 times faster for a tree of size 150!!
+#' }
 #' }
 dendextendRcpp_heights_per_k.dendrogram <- function(tree,...)
 {
