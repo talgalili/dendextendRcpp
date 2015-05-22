@@ -50,7 +50,7 @@
 #'                times = 100)
 #' # about 30 times faster. It is faster the larger the tree is.
 #' }
-labels.dendrogram <- function(object,warn = FALSE, ...) {
+dendextendRcpp_labels.dendrogram <- function(object, warn = FALSE, ...) {
    
    if(is.leaf(object)) return(attr(object, "label"))   
    
