@@ -1,4 +1,2 @@
 useDynLib(dendextendRcpp)
 exportPattern("^[[:alpha:]]+")
-importFrom(Rcpp)
-importFrom(dendextend)
