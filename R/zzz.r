@@ -86,9 +86,9 @@ assign_dendextendRcpp_to_dendextend <- function() {
    # options(dendextend_heights_per_k.dendrogram = dendextendRcpp::heights_per_k.dendrogram)
    # options(dendextend_cut_lower_fun = dendextendRcpp::cut_lower_fun)
 
-   dendextend_options("get_branches_heights" , dendextendRcpp::dendextendRcpp_get_branches_heights)
-   dendextend_options("heights_per_k.dendrogram" , dendextendRcpp::dendextendRcpp_heights_per_k.dendrogram)
-   dendextend_options("cut_lower_fun" , dendextendRcpp::dendextendRcpp_cut_lower_fun)
+   dendextend::dendextend_options("get_branches_heights" , dendextendRcpp::dendextendRcpp_get_branches_heights)
+   dendextend::dendextend_options("heights_per_k.dendrogram" , dendextendRcpp::dendextendRcpp_heights_per_k.dendrogram)
+   dendextend::dendextend_options("cut_lower_fun" , dendextendRcpp::dendextendRcpp_cut_lower_fun)
    dendextend::dendextend_options("labels.dendrogram" , dendextendRcpp::dendextendRcpp_labels.dendrogram)
    
    # dendextend_options()
@@ -160,6 +160,7 @@ remove_dendextendRcpp_options <- function() {
    ####
 #    packageStartupMessage(installrWelcomeMessage())  
    
+   # look at the top of this file.
    assign_dendextendRcpp_to_dendextend()
    
    
