@@ -1,3 +1,22 @@
+dendextendRcpp 0.6.0 (2015-05-22)
+----------------------------
+
+UPDATED R FUNCTIONS:
+   * renamed: labels.dendrogram -> dendextendRcpp_labels.dendrogram
+   * assign_dendextendRcpp_to_dendextend - 
+      * now loads into dendextend_options the dendextendRcpp_labels.dendrogram. This is intended to fix: 
+               "checking use of S3 registration ... WARNING
+            Registered S3 method from a standard package overwritten by 'dendextendRcpp':
+            method from 
+            labels.dendrogram stats"
+      * Added "dendextend::" to fix: "no visible global function
+definition for 'dendextend_options'"
+   * Fix various "no visible global function definition for"
+
+OTHER NOTES:
+   * Now works through "create_dendextend_options" (Thanks to suggestions by Kurt Hornik and Uwe Ligges).
+
+
 dendextendRcpp 0.5.1 (2014-03-16)
 ----------------------------
 
