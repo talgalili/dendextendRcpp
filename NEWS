@@ -1,3 +1,19 @@
+dendextendRcpp 0.6.1 (2015-05-22)
+----------------------------
+
+Fixed:
+   * "Possibly mis-spelled words in DESCRIPTION:  Rcpp (3:45, 16:15)" - single quote Rcpp in the title and description.
+   * The Title field should be in title case, current version then in title case:
+      ‘Faster dendrogram manipulation using Rcpp’
+      ‘Faster Dendrogram Manipulation using Rcpp’
+   * checking package namespace information ... NOTE
+           Namespaces with empty importFrom:
+           ‘Rcpp’ ‘dendextend’
+   * checking top-level files ... NOTE
+         Non-standard file/directory found at top level:
+           ‘NEWS.md’
+
+
 dendextendRcpp 0.6.0 (2015-05-22)
 ----------------------------
 
