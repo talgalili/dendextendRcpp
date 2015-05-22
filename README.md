@@ -20,14 +20,14 @@ R.
 To install the stable version on CRAN:
 
 ```r
-# install.packages('dendextendRcpp') # not yet available from CRAN
+install.packages('dendextendRcpp')
 ```
 
-To install the GitHub version:
+To install the cutting-edge GitHub version:
 
 ```r
-if (!require('devtools')) install.packages('devtools'); require('devtools')
-install_github('talgalili/dendextendRcpp')
+if (!require('devtools')) install.packages('devtools'); 
+devtools::install_github('talgalili/dendextendRcpp')
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ labels(dend)
 
 require(microbenchmark)
 microbenchmark(stats_labels.dendrogram(dend),
-               dendextendRcpp::labels.dendrogram(dend),
+               dendextendRcpp::dendextendRcpp_labels.dendrogram(dend),
                times = 100)
 # about 10-30 times faster. It is faster the larger the tree is.
 
@@ -59,7 +59,7 @@ You are welcome to:
 
 ## Available functions
 
-* labels.dendrogram (or simply labels)
+* dendextendRcpp_labels.dendrogram 
 * cut_lower_fun
 * get_branches_heights
 * heights_per_k.dendrogram
@@ -74,4 +74,13 @@ Visit the Rcpp project!
 * http://cran.r-project.org/web/packages/Rcpp/index.html
 * http://dirk.eddelbuettel.com/code/rcpp.html
 * http://blog.r-enthusiasts.com/tag/rcpp/ 
+
+
+
+
+
+# Code of conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
 

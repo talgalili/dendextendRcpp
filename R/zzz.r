@@ -158,7 +158,7 @@ remove_dendextendRcpp_options <- function() {
 
 .onAttach <- function(lib, pkg,...){
    ####
-#    packageStartupMessage(installrWelcomeMessage())  
+   # packageStartupMessage("Consider running: labels.dendrogram <- dendextendRcpp_labels.dendrogram if you wish to gain extra speed on your own dendrogram-related functions")
    
    # look at the top of this file.
    assign_dendextendRcpp_to_dendextend()
