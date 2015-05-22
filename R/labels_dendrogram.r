@@ -23,7 +23,6 @@
 #' @aliases 
 #' Rcpp_labels_dendrogram
 #' stats_labels.dendrogram
-#' @S3method labels dendrogram
 #' @description 
 #' Extract the leaves labels from a dendrogram object.
 #' @usage
@@ -63,6 +62,7 @@ dendextendRcpp_labels.dendrogram <- function(object, warn = FALSE, ...) {
 }
 
 
+# labels.dendrogram <- dendextendRcpp_labels.dendrogram
 
 
 # detach( 'package:dendextendRcpp', unload=TRUE )
