@@ -46,7 +46,7 @@ old_cut_lower_fun <- function(tree, h, FUN = labels, warn = FALSE, ...) {
 
 old_heights_per_k.dendrogram <- function (tree, ...) 
 {
-   our_dend_heights <- sort(unique(get_branches_heights(tree, 
+   our_dend_heights <- sort(unique(dendextend::get_branches_heights(tree, 
                                                         sort = FALSE)), TRUE)
    heights_to_remove_for_A_cut <- min(-diff(our_dend_heights))/2
    heights_to_cut_by <- c((max(our_dend_heights) + heights_to_remove_for_A_cut), 
