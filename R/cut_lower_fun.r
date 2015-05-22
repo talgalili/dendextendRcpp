@@ -66,7 +66,7 @@
 #' 
 dendextendRcpp_cut_lower_fun <- function(tree, h, FUN = labels, warn = FALSE, ...) {
    # is.dendrogram is from dendextend
-   if(!is.dendrogram(tree)) stop("'tree' needs to be a dendrogram. Aborting the function 'cut_lower_fun'.")
+   if(!dendextend::is.dendrogram(tree)) stop("'tree' needs to be a dendrogram. Aborting the function 'cut_lower_fun'.")
    
    if(is.leaf(tree)) return(list(FUN(tree)))
    # else:

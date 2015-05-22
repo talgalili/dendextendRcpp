@@ -71,7 +71,7 @@ dendextendRcpp_heights_per_k.dendrogram <- function(tree,...)
    # gets a dendro tree
    # returns a vector of heights, and the k clusters we'll get for each of them.
    
-   our_dend_heights <- sort(unique(get_branches_heights(tree, sort = FALSE)), TRUE)
+   our_dend_heights <- sort(unique(dendextend::get_branches_heights(tree, sort = FALSE)), TRUE)
    # notice that get_branches_heights is a function on dendextendRcpp
    
    heights_to_remove_for_A_cut <- min(-diff(our_dend_heights))/2 # the height to add so to be sure we get a "clear" cut
