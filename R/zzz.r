@@ -230,11 +230,18 @@ remove_dendextendRcpp_options <- function() {
 # require(devtools)
 # check("D:/Dropbox/aaaa good R code/AA - My packages/dendextendRcpp", args="--as-cran",document=FALSE)
 #                 Thanks to: http://stackoverflow.com/questions/10017702/r-cmd-check-options-for-more-rigorous-testing-2-15-0
+
+
 # file.copy("NEWS", "NEWS.md")
+# shell('git log --graph --stat --date=short --pretty=format:"%ad(%an) %s |%h" > ChangeLog', intern = TRUE)
+
+
+
+
 #
 #
 # require(devtools)
 # check(args="--as-cran",document=FALSE) # I need to not check the documents since this seem to force a NAMESPACE change...
-# build_win(version="R-devel")
+# devtools::build_win(version="R-devel")
 # release(check = FALSE)
 # release()

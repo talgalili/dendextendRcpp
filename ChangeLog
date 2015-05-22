@@ -1,0 +1,489 @@
+* 2015-05-22(Tal Galili) misc |a6c68f8| 
+|  R/zzz.r | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* 2015-05-22(Tal Galili) roxygen2 remove S3method |d60979c| 
+|  R/labels_dendrogram.r | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* 2015-05-22(Tal Galili) fix: Unknown, possibly mis-spelled, fields in DESCRIPTION:   'http' |3c13b40| 
+|  DESCRIPTION | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* 2015-05-22(Tal Galili) fix "no visible global function definition for" |be5d839| 
+|  R/imports_dendextend.r | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* 2015-05-22(Tal Galili) fix encoding |6e5105c| 
+|  R/zzz.r | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* 2015-05-22(Tal Galili) no longer using  labels.dendrogram. |739692f| 
+|  man/labels.dendrogram.Rd | 48 ----------------------------------------------
+|  1 file changed, 48 deletions(-)
+
+* 2015-05-22(Tal Galili) Bump 0.6.0 |021492a| 
+|  DESCRIPTION | 10 ++++++----
+|  NEWS        | 19 +++++++++++++++++++
+|  2 files changed, 25 insertions(+), 4 deletions(-)
+
+* 2015-05-22(Tal Galili) Fix various "no visible global function definition for" |2794e4c| 
+|  R/cut_lower_fun.r      | 2 +-
+|  R/heights_per_k.r      | 2 +-
+|  R/imports_dendextend.r | 4 ++--
+|  3 files changed, 4 insertions(+), 4 deletions(-)
+
+* 2015-05-22(Tal Galili) Added code of conduct and a few corrections to stuff. |b00f744| 
+|  .Rbuildignore |  1 +
+|  CONDUCT.md    | 25 +++++++++++++++++++++++++
+|  R/zzz.r       |  2 +-
+|  README.md     | 21 +++++++++++++++------
+|  4 files changed, 42 insertions(+), 7 deletions(-)
+
+* 2015-05-22(Tal Galili) Added "dendextend::" to fix: "no visible global function definition for 'dendextend_options'" |b276f7b| 
+|  R/zzz.r | 7 ++++---
+|  1 file changed, 4 insertions(+), 3 deletions(-)
+
+* 2015-05-22(Tal Galili) assign_dendextendRcpp_to_dendextend -       * now loads into dendextend_options the dendextendRcpp_labels.dendrogram. This is intended to fix:                "checking use of S3 registration ... WARNING             Registered S3 method from a standard package overwritten by 'dendextendRcpp':             method from             labels.dendrogram stats" |0924c6a| 
+|  R/zzz.r | 1 +
+|  1 file changed, 1 insertion(+)
+
+* 2015-05-22(Tal Galili) Moved to roxygen2 (4.1.1) |ea75c8d| 
+|  man/dendextendRcpp-package.Rd                  |  2 +
+|  man/dendextendRcpp_cut_lower_fun.Rd            | 36 +++++++++---------
+|  man/dendextendRcpp_get_branches_heights.Rd     | 25 ++++++------
+|  man/dendextendRcpp_heights_per_k.dendrogram.Rd | 20 +++++-----
+|  man/dendextendRcpp_labels.dendrogram.Rd        | 48 ++++++++++++++++++++++++
+|  5 files changed, 89 insertions(+), 42 deletions(-)
+
+* 2015-05-22(Tal Galili) remove labels.dendrogram from NAMESPACE |46f8a70| 
+|  NAMESPACE | 2 --
+|  1 file changed, 2 deletions(-)
+
+* 2015-05-22(Tal Galili) renamed: labels.dendrogram -> dendextendRcpp_labels.dendrogram |e6d8fcb| 
+|  R/labels_dendrogram.r | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* 2014-03-16(Tal Galili) Hiding {microbenchmark} from the docs (Props to Prof Brian Ripley), from the functions: dendextendRcpp_get_branches_heights, dendextendRcpp_heights_per_k.dendrogram, dendextendRcpp::labels.dendrogram |aa0a60f| 
+|  DESCRIPTION                                    | 4 ++--
+|  NEWS                                           | 7 +++++++
+|  R/get_dend_heights.r                           | 3 ++-
+|  R/heights_per_k.r                              | 2 ++
+|  R/labels_dendrogram.r                          | 2 ++
+|  man/dendextendRcpp_get_branches_heights.Rd     | 3 ++-
+|  man/dendextendRcpp_heights_per_k.dendrogram.Rd | 2 ++
+|  man/labels.dendrogram.Rd                       | 2 ++
+|  8 files changed, 21 insertions(+), 4 deletions(-)
+
+* 2014-03-15(Tal Galili) Added dependency for R (>= 3.0.0) |edfb7da| 
+|  DESCRIPTION | 1 +
+|  NEWS        | 3 +++
+|  2 files changed, 4 insertions(+)
+
+* 2014-03-15(Tal Galili) A TODO reminder for the future:  Check if we have any old_ that should be changed into dendextend_ |13af905| 
+|  NEWS | 4 ++++
+|  1 file changed, 4 insertions(+)
+
+* 2014-03-15(Tal Galili) Added quick "check" command |249d82d| 
+|  R/zzz.r | 4 ++++
+|  1 file changed, 4 insertions(+)
+
+* 2014-03-15(Tal Galili) added remove_dendextendRcpp_options alias (resolves warning) |6cba3fd| 
+|  R/dendextendRcpp-package.r | 1 +
+|  1 file changed, 1 insertion(+)
+
+* 2014-03-15(Tal Galili) Added dendextendRcpp_ to function names (updated docs) |5de50b9| 
+|  R/cut_lower_fun.r                              |  4 +-
+|  R/get_dend_heights.r                           |  2 +-
+|  R/heights_per_k.r                              | 14 ++---
+|  man/cut_lower_fun.Rd                           | 65 -----------------------
+|  man/dendextendRcpp-package.Rd                  |  1 +
+|  man/dendextendRcpp_cut_lower_fun.Rd            |  4 +-
+|  man/dendextendRcpp_get_branches_heights.Rd     |  2 +-
+|  man/dendextendRcpp_heights_per_k.dendrogram.Rd | 16 +++---
+|  man/get_branches_heights.Rd                    | 67 ------------------------
+|  man/heights_per_k.dendrogram.Rd                | 54 -------------------
+|  10 files changed, 23 insertions(+), 206 deletions(-)
+
+* 2014-03-15(Tal Galili) Force  dendextend (>= 0.14.0) |c0ea470| 
+|  DESCRIPTION | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* 2014-03-15(Tal Galili) renamed:       * cut_lower_fun -> dendextendRcpp_cut_lower_fun       * get_branches_heights -> dendextendRcpp_get_branches_heights       * heights_per_k.dendrogram -> dendextendRcpp_heights_per_k.dendrogram |f5b1f46| 
+|  NEWS                                           |  7 +++
+|  R/cut_lower_fun.r                              |  4 +-
+|  R/get_dend_heights.r                           |  4 +-
+|  R/heights_per_k.r                              |  6 ++-
+|  R/zzz.r                                        |  6 +--
+|  inst/tests/test-get_branches_heights.r         |  2 +-
+|  inst/tests/test-heights_per_k.r                |  2 +-
+|  man/dendextendRcpp_cut_lower_fun.Rd            | 65 ++++++++++++++++++++++
+|  man/dendextendRcpp_get_branches_heights.Rd     | 68 ++++++++++++++++++++++++
+|  man/dendextendRcpp_heights_per_k.dendrogram.Rd | 54 +++++++++++++++++++
+|  10 files changed, 207 insertions(+), 11 deletions(-)
+
+* 2014-03-15(Tal Galili) Now works through "create_dendextend_options" (Thanks to suggestions by Kurt Hornik and Uwe Ligges). |dcb407c| 
+|  DESCRIPTION |  4 ++--
+|  NEWS        |  8 ++++++++
+|  R/zzz.r     | 26 +++++++++++++++++++++++---
+|  3 files changed, 33 insertions(+), 5 deletions(-)
+
+* 2014-03-01(Tal Galili) typos |b71022b| 
+|  DESCRIPTION | 4 ++--
+|  1 file changed, 2 insertions(+), 2 deletions(-)
+
+* 2014-03-01(Tal Galili) BUMP to Version: 0.4.0 |f383cf4| 
+|  DESCRIPTION | 6 +++---
+|  1 file changed, 3 insertions(+), 3 deletions(-)
+
+* 2014-03-01(Tal Galili) assign_dendextendRcpp_to_dendextend - Moved to passing the functions through "options" instead of through assignInNamespace. |d8ed895| 
+|  NEWS    | 12 +++++++++++
+|  R/zzz.r | 68 ++++++++++++++++++++++++++++++++++++++-------------------------
+|  2 files changed, 53 insertions(+), 27 deletions(-)
+
+* 2014-02-04(Tal Galili) dendextend 0.3.3 is intended to be shipped to CRAN. (first release!) |6c14f55| 
+|  DESCRIPTION | 4 ++--
+|  NEWS        | 2 ++
+|  R/zzz.r     | 3 +--
+|  3 files changed, 5 insertions(+), 4 deletions(-)
+
+* 2014-02-04(Tal Galili) changed .hpp -> .h (some missed ones) |ea24a19| 
+|  src/get_branches_heights.cpp | 2 +-
+|  src/labels_dendrogram.cpp    | 2 +-
+|  2 files changed, 2 insertions(+), 2 deletions(-)
+
+* 2014-02-04(Tal Galili) added Kevin Ushey to Authors@R list (thanks to his patch) |e752169| 
+|  DESCRIPTION |  7 ++++---
+|  NEWS        | 19 ++++++++++++++++++-
+|  2 files changed, 22 insertions(+), 4 deletions(-)
+
+* 2014-02-04(Tal Galili) changed .hpp -> .h (for portability issues, props to Kurt Hornik) |999903a| 
+|  src/cut_lower.cpp            |  4 ++--
+|  src/get_branches_heights.h   | 32 ++++++++++++++++++++++++++++++++
+|  src/get_branches_heights.hpp | 32 --------------------------------
+|  src/heights_per_k.cpp        |  4 ++--
+|  src/is_functions.h           | 37 +++++++++++++++++++++++++++++++++++++
+|  src/is_functions.hpp         | 37 -------------------------------------
+|  6 files changed, 73 insertions(+), 73 deletions(-)
+
+* 2014-02-04(Tal Galili) old_* functions in the new imports_dendextend.r file |b545546| 
+|  R/imports_dendextend.r | 72 ++++++++++++++++++++++++++++++++++++++++++++++++
+|  R/zzz.r                |  8 ++++--
+|  2 files changed, 77 insertions(+), 3 deletions(-)
+
+*   2014-02-04(Tal Galili) Merge branch 'master' of https://github.com/talgalili/RcppDend.git |b886dd5
+|\  
+| *   2014-02-03(Tal Galili) Merge pull request #1 from kevinushey/master |37cebfa
+| |\  
+| | * 2014-02-03(Kevin Ushey) Workarounds for Rcpp 0.11.0 |14992dc
+| |/  | |   
+| |    src/cut_lower.cpp            | 6 +++---
+| |    src/get_branches_heights.cpp | 2 +-
+| |    src/heights_per_k.cpp        | 4 ++--
+| |    3 files changed, 6 insertions(+), 6 deletions(-)
+
+* | 2014-02-04(Tal Galili) minor |4b2dedb
+|/  |   
+|    R/zzz.r | 4 +++-
+|    1 file changed, 3 insertions(+), 1 deletion(-)
+
+* 2014-02-03(Tal Galili) dendextend 0.3.2 is intended to be shipped to CRAN. (first release!) |2a1d199| 
+|  NEWS | 2 ++
+|  1 file changed, 2 insertions(+)
+
+* 2014-02-03(Tal Galili) Fixed: cut_lower_labels -> cut_lower_fun |8faa4a7| 
+|  NEWS                    |  1 +
+|  R/cut_lower_fun.r       |  2 +-
+|  R/zzz.r                 |  1 +
+|  man/cut_lower_labels.Rd | 51 -----------------------------------------------
+|  4 files changed, 3 insertions(+), 52 deletions(-)
+
+* 2014-02-03(Tal Galili) Undocumented code objects - added aliases |ec90976| 
+|  NAMESPACE                       |  2 ++
+|  NEWS                            |  3 ++-
+|  R/RcppDend.r                    | 22 ----------------------
+|  R/cut_lower_fun.r               |  1 +
+|  R/dendextendRcpp-package.r      | 34 ++++++++++++++++++++++++++++++++++
+|  R/heights_per_k.r               |  3 +++
+|  R/labels_dendrogram.r           |  3 +++
+|  R/zzz.r                         | 17 +++++++++++++++++
+|  man/cut_lower_fun.Rd            |  1 +
+|  man/dendextendRcpp-package.Rd   | 17 +++++++++++++++++
+|  man/heights_per_k.dendrogram.Rd |  3 +++
+|  man/labels.dendrogram.Rd        |  2 ++
+|  12 files changed, 85 insertions(+), 23 deletions(-)
+
+* 2014-02-03(Tal Galili) Rcpp_cut_lower -> dendextendRcpp::Rcpp_cut_lower |fc87f5e| 
+|  NEWS                 | 1 +
+|  R/cut_lower_fun.r    | 4 ++--
+|  R/zzz.r              | 1 +
+|  man/cut_lower_fun.Rd | 4 ++--
+|  4 files changed, 6 insertions(+), 4 deletions(-)
+
+* 2014-02-03(Tal Galili) Fix: Undocumented arguments in documentation object 'cut_lower_fun' |94af2cc| 
+|  NEWS                 | 1 +
+|  R/cut_lower_fun.r    | 1 +
+|  man/cut_lower_fun.Rd | 2 ++
+|  3 files changed, 4 insertions(+)
+
+* 2014-02-03(Tal Galili) cut_lower_fun - fix "cutree" links (to go to exact package) |4f42026| 
+|  NEWS                 | 2 +-
+|  R/cut_lower_fun.r    | 6 +++---
+|  man/cut_lower_fun.Rd | 3 ++-
+|  3 files changed, 6 insertions(+), 5 deletions(-)
+
+* 2014-02-03(Tal Galili) Fix: Codoc mismatches from documentation object 'labels.dendrogram' |38fa242| 
+|  NEWS                     | 2 ++
+|  R/labels_dendrogram.r    | 2 +-
+|  man/labels.dendrogram.Rd | 2 +-
+|  3 files changed, 4 insertions(+), 2 deletions(-)
+
+* 2014-02-03(Tal Galili) Added aliases to: 'old_cut_lower_fun', 'old_get_branches_heights',  'old_heights_per_k.dendrogram'. Thus fixing "checking for missing documentation entries ... WARNING - Undocumented code objects:" |ab05399| 
+|  NEWS                            | 3 +++
+|  R/cut_lower_fun.r               | 2 ++
+|  R/get_dend_heights.r            | 2 ++
+|  R/heights_per_k.r               | 2 ++
+|  man/cut_lower_fun.Rd            | 1 +
+|  man/get_branches_heights.Rd     | 1 +
+|  man/heights_per_k.dendrogram.Rd | 1 +
+|  7 files changed, 12 insertions(+)
+
+* 2014-02-03(Tal Galili) More ::: -> :: / old stuff. |d6d29a6| 
+|  R/cut_lower_fun.r               | 2 +-
+|  R/get_dend_heights.r            | 4 ++--
+|  R/heights_per_k.r               | 6 +++---
+|  R/labels_dendrogram.r           | 2 +-
+|  inst/tests/test-heights_per_k.r | 4 ++--
+|  man/cut_lower_fun.Rd            | 2 +-
+|  man/cut_lower_labels.Rd         | 2 +-
+|  man/get_branches_heights.Rd     | 4 ++--
+|  man/heights_per_k.dendrogram.Rd | 6 +++---
+|  man/labels.dendrogram.Rd        | 2 +-
+|  10 files changed, 17 insertions(+), 17 deletions(-)
+
+* 2014-02-03(Tal Galili) stats:::labels.dendrogram -> stats_labels.dendrogram (in the new imports_stats.r file) |f1fda44| 
+|  DESCRIPTION                         |  6 ++---
+|  NEWS                                | 16 +++++++++++-
+|  R/cut_lower_fun.r                   |  2 +-
+|  R/get_dend_heights.r                |  2 +-
+|  R/imports_stats.r                   | 30 ++++++++++++++++++++++
+|  R/labels_dendrogram.r               |  4 +--
+|  R/zzz.r                             | 47 ++++++++++++++++++++++++++++++++++-
+|  README.md                           |  2 +-
+|  inst/tests/test-labels_dendrogram.r |  6 ++---
+|  man/cut_lower_fun.Rd                |  2 +-
+|  man/cut_lower_labels.Rd             |  2 +-
+|  man/get_branches_heights.Rd         |  2 +-
+|  man/labels.dendrogram.Rd            |  2 +-
+|  13 files changed, 106 insertions(+), 17 deletions(-)
+
+* 2014-02-03(Tal Galili) dendextend::: ->  old_ |a5a4599| 
+|  README.md                              | 10 +++++++---
+|  inst/tests/test-cut_lower_fun.r        |  2 ++
+|  inst/tests/test-get_branches_heights.r | 10 ++++++----
+|  inst/tests/test-heights_per_k.r        |  6 +++---
+|  inst/tests/test-labels_dendrogram.r    |  8 ++++----
+|  5 files changed, 22 insertions(+), 14 deletions(-)
+
+* 2014-02-02(Tal Galili) Fixed the assignment of "old_" to "make sense"... (they are now added to dendextendRcpp enviornment) |efc39f2| 
+|  DESCRIPTION                     | 23 +++++-------
+|  NEWS                            | 12 +++++++
+|  R/zzz.r                         | 76 ++++++++++++++++++++++++++-------------
+|  man/cut_lower_fun.Rd            | 28 +++++++--------
+|  man/get_branches_heights.Rd     | 21 ++++++-----
+|  man/heights_per_k.dendrogram.Rd | 17 +++++----
+|  man/labels.dendrogram.Rd        | 16 ++++-----
+|  src/RcppExports.cpp             | 28 +++++++--------
+|  8 files changed, 125 insertions(+), 96 deletions(-)
+
+* 2013-08-21(Tal Galili) Added a test, and a comment about another way for getting an object's size... |77ba055| 
+|  inst/tests/test-cut_lower_fun.r | 34 ++++++++++++++++++++++++++++++++++
+|  man/cut_lower_fun.Rd            |  6 +++---
+|  src/cut_lower.cpp               |  4 ++++
+|  3 files changed, 41 insertions(+), 3 deletions(-)
+
+* 2013-08-20(Tal Galili) Copying the object to avoid strange behaviors within R! |7c92968| 
+|  R/RcppExports.R     |  4 ++--
+|  R/cut_lower_fun.r   |  6 +++---
+|  src/RcppExports.cpp |  8 ++++----
+|  src/cut_lower.cpp   | 26 +++++++++++++++++++++++---
+|  4 files changed, 32 insertions(+), 12 deletions(-)
+
+* 2013-08-20(Tal Galili) Rcpp_cut_lower now changes the output of the nodes to be of dendrogram class       which enables the fast operation of functions on them! |8b74ac5| 
+|  NEWS                 |  4 +++-
+|  R/RcppExports.R      |  4 ++--
+|  R/cut_lower_fun.r    | 12 +++++++-----
+|  man/cut_lower_fun.Rd |  1 +
+|  src/RcppExports.cpp  |  7 ++++---
+|  src/cut_lower.cpp    | 17 ++++++++++++++++-
+|  6 files changed, 33 insertions(+), 12 deletions(-)
+
+* 2013-08-20(Tal Galili) Change SEXP to RObject |57097ad| 
+|  DESCRIPTION          |  2 +-
+|  R/cut_lower_fun.r    | 30 ++++++++++++++++++++----------
+|  man/cut_lower_fun.Rd | 31 +++++++++++++++++++------------
+|  src/RcppExports.cpp  |  4 ++--
+|  src/cut_lower.cpp    |  9 ++++++---
+|  5 files changed, 48 insertions(+), 28 deletions(-)
+
+* 2013-08-20(Tal Galili) Version bump to 0.3.0 |4783ba2| 
+|  DESCRIPTION | 9 ++++++---
+|  1 file changed, 6 insertions(+), 3 deletions(-)
+
+* 2013-08-20(Tal Galili) cut_lower_fun function added - allowing for a faster cutree(h) for dendrograms! |bf70d9c| 
+|  NEWS                                |  9 +++-
+|  R/RcppExports.R                     |  4 ++
+|  R/cut_lower_fun.r                   | 70 +++++++++++++++++++++++++++++++
+|  dendextendRcpp.Rproj                |  2 +-
+|  inst/tests/test-cut_lower_fun.r     | 78 +++++++++++++++++++++++++++++++++++
+|  inst/tests/test-labels_dendrogram.r |  2 +-
+|  man/cut_lower_fun.Rd                | 52 +++++++++++++++++++++++
+|  man/cut_lower_labels.Rd             | 51 +++++++++++++++++++++++
+|  src/RcppExports.cpp                 | 16 +++++++
+|  src/cut_lower.cpp                   | 75 +++++++++++++++++++++++++++++++++
+|  src/labels_dendrogram.cpp           |  1 +
+|  11 files changed, 357 insertions(+), 3 deletions(-)
+
+* 2013-08-20(Tal Galili) added zzz.r file - with code to override dendextend functions in case dendextendRcpp is loaded AFTER dendextend. |ceb837b| 
+|  DESCRIPTION |   5 +--
+|  NEWS        |   6 ++++
+|  R/zzz.r     | 107 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|  3 files changed, 116 insertions(+), 2 deletions(-)
+
+* 2013-08-19(Tal Galili) added warn=FALSE to labels.dendrogram |3a3594c| 
+|  NEWS                     | 3 +++
+|  R/labels_dendrogram.r    | 6 ++++--
+|  man/labels.dendrogram.Rd | 4 ++++
+|  3 files changed, 11 insertions(+), 2 deletions(-)
+
+* 2013-08-19(Tal Galili) RENAMED package: from RcppDend to dendextendRcpp - in order to have it easier to remember (at least for me). |1aaa46a| 
+|  DESCRIPTION                            |  4 ++--
+|  NAMESPACE                              |  2 +-
+|  NEWS                                   |  9 +++++----
+|  R/RcppDend.r                           |  6 +++---
+|  R/RcppExports.R                        | 14 +++++++-------
+|  R/get_dend_heights.r                   |  8 ++++----
+|  R/heights_per_k.r                      | 12 ++++++------
+|  R/labels_dendrogram.r                  |  8 ++++----
+|  README.md                              | 14 +++++++-------
+|  RcppDend.Rproj                         | 17 -----------------
+|  dendextendRcpp.Rproj                   | 17 +++++++++++++++++
+|  inst/tests/test-get_branches_heights.r |  4 ++--
+|  inst/tests/test-heights_per_k.r        |  6 +++---
+|  inst/tests/test-labels_dendrogram.r    | 18 +++++++++---------
+|  man/get_branches_heights.Rd            |  2 +-
+|  man/heights_per_k.dendrogram.Rd        |  4 ++--
+|  man/labels.dendrogram.Rd               |  2 +-
+|  src/RcppExports.cpp                    | 14 +++++++-------
+|  src/get_branches_heights.cpp           |  2 +-
+|  src/get_branches_heights.hpp           |  2 +-
+|  src/heights_per_k.cpp                  |  2 +-
+|  src/is_functions.cpp                   |  2 +-
+|  src/is_functions.hpp                   |  2 +-
+|  src/labels_dendrogram.cpp              |  2 +-
+|  tests/test-all.r                       |  4 ++--
+|  25 files changed, 89 insertions(+), 88 deletions(-)
+
+* 2013-08-19(Tal Galili) Showing a "problem" for trees with missing labels. |1a2ea1c| 
+|  inst/tests/test-labels_dendrogram.r | 35 +++++++++++++++++++++++++++++++++++
+|  1 file changed, 35 insertions(+)
+
+* 2013-08-19(Tal Galili) moved labels.dendrogram to a new file labels_dendrogram.r |da1bef0| 
+|  DESCRIPTION           |  3 ++-
+|  NEWS                  |  2 ++
+|  R/RcppDend.r          | 43 +--------------------------------
+|  R/labels_dendrogram.r | 63 +++++++++++++++++++++++++++++++++++++++++++++++++
+|  4 files changed, 68 insertions(+), 43 deletions(-)
+
+* 2013-08-19(Tal Galili) Bug fix: labels.dendrogram - now returns a label also if the tree is just a leaf. |306023e| 
+|  NEWS                                |  5 +++--
+|  R/RcppDend.r                        |  5 ++++-
+|  inst/tests/test-labels_dendrogram.r | 11 ++++++++++-
+|  src/labels_dendrogram.cpp           | 19 +++++++++++++++----
+|  4 files changed, 32 insertions(+), 8 deletions(-)
+
+* 2013-08-19(Tal Galili) Change .h -> .hpp |7f9b7a4| 
+|  NEWS                         |  2 +-
+|  src/get_branches_heights.cpp |  2 +-
+|  src/get_branches_heights.h   | 32 --------------------------------
+|  src/get_branches_heights.hpp | 32 ++++++++++++++++++++++++++++++++
+|  src/heights_per_k.cpp        |  4 ++--
+|  src/is_functions.h           | 36 ------------------------------------
+|  src/is_functions.hpp         | 37 +++++++++++++++++++++++++++++++++++++
+|  src/labels_dendrogram.cpp    |  2 +-
+|  8 files changed, 74 insertions(+), 73 deletions(-)
+
+* 2013-08-19(Tal Galili) Bump verstion to 0.2.0 |390ad7a| 
+|  DESCRIPTION        | 6 ++++--
+|  src/is_functions.h | 2 ++
+|  2 files changed, 6 insertions(+), 2 deletions(-)
+
+* 2013-08-19(Tal Galili) heights_per_k.dendrogram function added - gives a 10 to 130(!) faster loading times. |d337c39| 
+|  NEWS                            |   3 ++
+|  R/RcppExports.R                 |  20 ++++++++
+|  R/heights_per_k.r               |  82 +++++++++++++++++++++++++++++++
+|  inst/tests/test-heights_per_k.r |  30 +++++++++++
+|  man/heights_per_k.dendrogram.Rd |  51 +++++++++++++++++++
+|  src/RcppExports.cpp             |  79 +++++++++++++++++++++++++++++
+|  src/get_branches_heights.h      |  32 ++++++++++++
+|  src/heights_per_k.cpp           | 101 ++++++++++++++++++++++++++++++++++++++
+|  8 files changed, 398 insertions(+)
+
+* 2013-08-19(Tal Galili) get_branches_heights function added - overrides dendextend function dendextend:::get_branches_heights function. (it is 40-100 times faster!) |5ad3660| 
+|  NEWS                                   | 11 ++++-
+|  R/get_dend_heights.r                   | 78 ++++++++++++++++++++++++++++++
+|  inst/tests/test-get_branches_heights.r | 27 +++++++++++
+|  man/get_branches_heights.Rd            | 67 ++++++++++++++++++++++++++
+|  src/get_branches_heights.cpp           | 81 ++++++++++++++++++++++++++++++++
+|  src/is_functions.h                     |  6 +--
+|  6 files changed, 266 insertions(+), 4 deletions(-)
+
+* 2013-08-19(Tal Galili) Moved "is" function to a new file called "is_functions.cpp". Created a "is_functions.h" file for it, and made sure to call it from "labels_dendrogram.cpp" |97f1627| 
+|  NEWS                      | 10 +++++++++
+|  src/is_functions.cpp      | 54 +++++++++++++++++++++++++++++++++++++++++++++
+|  src/is_functions.h        | 34 ++++++++++++++++++++++++++++
+|  src/labels_dendrogram.cpp | 24 +-------------------
+|  4 files changed, 99 insertions(+), 23 deletions(-)
+
+* 2013-08-17(Tal Galili) Version bump to 0.1.1 |6b58247| 
+|  DESCRIPTION | 2 +-
+|  1 file changed, 1 insertion(+), 1 deletion(-)
+
+* 2013-08-17(Tal Galili) Added tests. |be2a960| 
+|  R/RcppDend.r                        |  6 ++++++
+|  RcppDend.Rproj                      |  2 +-
+|  inst/tests/test-labels_dendrogram.r | 31 ++++++++++++++++++++++++-------
+|  3 files changed, 31 insertions(+), 8 deletions(-)
+
+* 2013-08-17(Tal Galili) Fixed the package! Added missing rows from NAMESPACE (They were removed automatically due to a bug in roxygen2+Rstudio) |25d4565| 
+|  NAMESPACE           |  2 ++
+|  NEWS                | 13 +++++++++++++
+|  src/RcppExports.cpp | 26 ++++++++++++++++++--------
+|  3 files changed, 33 insertions(+), 8 deletions(-)
+
+* 2013-08-17(Tal Galili) Example - trimmed a line. |2d8646d| 
+|  R/RcppDend.r             | 3 +--
+|  man/labels.dendrogram.Rd | 3 +--
+|  2 files changed, 2 insertions(+), 4 deletions(-)
+
+* 2013-08-16(Tal Galili) Added README |d805de0| 
+|  README.md | 73 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|  1 file changed, 73 insertions(+)
+
+* 2013-08-16(Tal Galili) First commit |af49c28  
+   .Rbuildignore                       |   2 +
+   .gitignore                          |   6 ++
+   DESCRIPTION                         |  24 +++++++
+   NAMESPACE                           |   2 +
+   NEWS                                |  21 ++++++
+   R/RcppDend.r                        |  55 +++++++++++++++
+   R/RcppExports.R                     |  11 +++
+   RcppDend.Rproj                      |  17 +++++
+   inst/tests/test-labels_dendrogram.r |  24 +++++++
+   man/labels.dendrogram.Rd            |  41 ++++++++++++
+   src/Makevars                        |  27 ++++++++
+   src/Makevars.win                    |   3 +
+   src/RcppExports.cpp                 |  27 ++++++++
+   src/labels_dendrogram.cpp           | 122 ++++++++++++++++++++++++++++++++++
+   tests/test-all.r                    |   6 ++
+   15 files changed, 388 insertions(+)
