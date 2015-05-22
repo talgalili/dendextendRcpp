@@ -174,7 +174,7 @@ remove_dendextendRcpp_options <- function() {
 
 
 
-
+# devtools::use_travis()
 
 
 

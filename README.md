@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/talgalili/dendextendRcpp.png?branch=master)](https://travis-ci.org/talgalili/dendextendRcpp)
+
+
+
 # dendextendRcpp
 
 ## Introduction
