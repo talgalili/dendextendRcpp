@@ -9,7 +9,7 @@
 R-devel-mailing list.
 }
 \usage{
-\method{labels}{dendrogram}(object, warn=FALSE, ...)
+dendextendRcpp_labels.dendrogram(object, warn = FALSE, ...)
 }
 \arguments{
 \item{object}{a dendrogram object.}
@@ -32,9 +32,9 @@ dend <- as.dendrogram(hclust(dist(USArrests)))
 labels(dend)
 
 \dontrun{
-require(microbenchmark)
-microbenchmark(stats_labels.dendrogram(dend),
-               dendextendRcpp::labels.dendrogram(dend),
+# require(microbenchmark)
+microbenchmark::microbenchmark(dendextendRcpp::stats_labels.dendrogram(dend),
+               dendextendRcpp::dendextendRcpp_labels.dendrogram(dend),
                times = 100)
 # about 30 times faster. It is faster the larger the tree is.
 }

@@ -1,6 +1,13 @@
-* 2015-05-22(Tal Galili) misc |a6c68f8| 
-|  R/zzz.r | 2 +-
-|  1 file changed, 1 insertion(+), 1 deletion(-)
+* 2015-05-22(Tal Galili) Fix: Functions or methods with usage in documentation object 'dendextendRcpp_labels.dendrogram' but not in code: |80474ce| 
+|  R/labels_dendrogram.r                   | 8 +++-----
+|  man/dendextendRcpp_labels.dendrogram.Rd | 8 ++++----
+|  2 files changed, 7 insertions(+), 9 deletions(-)
+
+* 2015-05-22(Tal Galili) misc |b871a91| 
+|  ChangeLog | 489 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|  NEWS.md   | 194 ++++++++++++++++++++++++
+|  R/zzz.r   |   9 +-
+|  3 files changed, 691 insertions(+), 1 deletion(-)
 
 * 2015-05-22(Tal Galili) roxygen2 remove S3method |d60979c| 
 |  R/labels_dendrogram.r | 2 +-

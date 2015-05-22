@@ -25,8 +25,6 @@
 #' stats_labels.dendrogram
 #' @description 
 #' Extract the leaves labels from a dendrogram object.
-#' @usage
-#' \method{labels}{dendrogram}(object, warn=FALSE, ...)
 #' @param object a dendrogram object.
 #' @param warn logical (FALSE) - should the user be warned if reverting to
 #' default? (I set it to FALSE since it can be very noisy sometimes...)
@@ -43,9 +41,9 @@
 #' labels(dend)
 #' 
 #' \dontrun{
-#' require(microbenchmark)
-#' microbenchmark(stats_labels.dendrogram(dend),
-#'                dendextendRcpp::labels.dendrogram(dend),
+#' # require(microbenchmark)
+#' microbenchmark::microbenchmark(dendextendRcpp::stats_labels.dendrogram(dend),
+#'                dendextendRcpp::dendextendRcpp_labels.dendrogram(dend),
 #'                times = 100)
 #' # about 30 times faster. It is faster the larger the tree is.
 #' }
